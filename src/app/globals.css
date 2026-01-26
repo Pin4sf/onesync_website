@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Obsidian Edge Theme */
+  --background: #020202;
+  /* obsidian-950 */
+  --foreground: #EDEDED;
+  /* gray-100 */
+
+  /* Glassmorphism System */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  /* Subtle white tint */
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.05);
+
+  --neon-cyan: #00F0FF;
+  --neon-purple: #BF00FF;
+
+  --noise-url: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian-950 text-gray-200 antialiased selection:bg-neon-purple/30 selection:text-white overflow-x-hidden;
+    /* Global Noise Texture */
+    background-image: var(--noise-url);
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+
+  /* Custom Scrollbar - "Obsidian Edge" */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-obsidian-950;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-obsidian-800 rounded-full hover:bg-neon-cyan/50 transition-colors;
+  }
+}
+
+@layer utilities {
+
+  /* Typography System */
+  .type-display {
+    @apply font-display font-black tracking-tight uppercase leading-[0.85];
+  }
+
+  .type-body {
+    @apply font-sans font-light tracking-normal leading-relaxed text-gray-400;
+  }
+
+  .type-mono {
+    @apply font-mono text-xs uppercase tracking-[0.2em];
+  }
+
+  /* Premium Glass Cards */
+  .glass-panel {
+    @apply bg-obsidian-900/40 backdrop-blur-xl border border-white/5 shadow-2xl;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-panel-hover {
+    @apply transition-all duration-500 hover:border-white/20 hover:bg-white/[0.02] hover:shadow-[0_0_30px_rgba(191, 0, 255, 0.1)];
+  }
+
+  /* Text Effects */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(191, 0, 255, 0.5), 0 0 20px rgba(191, 0, 255, 0.3);
+  }
+
+  /* Animations */
+  .animate-pulse-fast {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
