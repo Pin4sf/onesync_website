@@ -14,7 +14,7 @@ export function Hero() {
             {/* Background Grid - managed via CSS now for better performance */}
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 pointer-events-none mix-blend-overlay" />
 
-            <div className="max-w-[1800px] mx-auto px-6 relative z-10 w-full grid lg:grid-cols-12 gap-12 items-center">
+            <div className="max-w-7xl mx-auto px-6 relative z-10 w-full grid lg:grid-cols-12 gap-12 items-center">
 
                 {/* Left Content - 7 cols */}
                 <div className="lg:col-span-7 space-y-12">
@@ -150,14 +150,14 @@ export function Hero() {
 
                         {/* Floating HUD Card */}
                         <motion.div
-                            initial={{ x: 50, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 1.2, duration: 0.8 }}
-                            className="absolute top-1/3 right-0 lg:-right-4 glass-panel p-6 rounded-none border-l-4 border-l-neon-cyan w-72 z-30"
+                            className="absolute bottom-12 left-4 lg:left-0 glass-panel p-6 rounded-lg border-t-2 border-t-neon-purple w-64 z-30 shadow-[0_0_30px_rgba(191,0,255,0.15)]"
                         >
                             <div className="flex items-center justify-between mb-4 pb-4 border-b border-white/10">
-                                <span className="mono-label text-neon-cyan">Live Inference</span>
-                                <div className="animate-pulse w-2 h-2 bg-neon-cyan rounded-full shadow-[0_0_10px_#66FCF1]" />
+                                <span className="mono-label text-neon-purple">Live Inference</span>
+                                <div className="animate-pulse w-2 h-2 bg-neon-purple rounded-full shadow-[0_0_10px_#BF00FF]" />
                             </div>
 
                             <div className="space-y-4">
