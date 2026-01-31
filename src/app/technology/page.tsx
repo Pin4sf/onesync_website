@@ -1,85 +1,72 @@
-import { Cpu, Wifi, Shield, Zap, Server, Code, Layers, FileJson, Activity } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+"use client";
+
+import { motion } from "framer-motion";
+import { SectionLabel } from "@/components/ui/SectionLabel";
+import { BackgroundText } from "@/components/ui/BackgroundText";
+import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
+import { Cpu, Wifi, Shield, Zap, Server, Code, Layers, FileJson, Activity, Lock, ArrowRight } from "lucide-react";
 
 const techStack = [
     {
         category: "Edge Computing",
         icon: Cpu,
-        color: "text-neon-cyan",
-        bgColor: "bg-neon-cyan/5",
-        borderColor: "border-neon-cyan/20",
         items: [
             {
                 name: "On-Device ML",
-                description:
-                    "TinyML models optimized for low-power ARM processors, enabling real-time feature extraction.",
-                icon: Layers
+                description: "TinyML models optimized for low-power ARM processors, enabling real-time feature extraction.",
+                icon: Layers,
             },
             {
                 name: "Signal Processing",
-                description:
-                    "Kalman filtering and adaptive algorithms for motion artifact rejection and signal quality assessment.",
-                icon: Activity
+                description: "Kalman filtering and adaptive algorithms for motion artifact rejection.",
+                icon: Activity,
             },
             {
                 name: "Feature Extraction",
-                description:
-                    "HRV computation, sleep stage classification, and activity recognition all happen locally.",
-                icon: FileJson
+                description: "HRV computation, sleep classification, and activity recognition all happen locally.",
+                icon: FileJson,
             },
         ],
     },
     {
         category: "Connectivity",
         icon: Wifi,
-        color: "text-white",
-        bgColor: "bg-white/5",
-        borderColor: "border-white/10",
         items: [
             {
                 name: "BLE 5.0",
-                description:
-                    "Low-energy Bluetooth for efficient, secure communication between OneBand and mobile device.",
-                icon: Wifi
+                description: "Low-energy Bluetooth for efficient, secure communication with mobile devices.",
+                icon: Wifi,
             },
             {
                 name: "Selective Sync",
-                description:
-                    "Only consented feature-level data is transmitted, never raw biosignals.",
-                icon: Server
+                description: "Only consented feature-level data is transmitted, never raw biosignals.",
+                icon: Server,
             },
             {
                 name: "Offline First",
-                description:
-                    "Full functionality without connectivity. Data syncs when connection is available.",
-                icon: Shield
+                description: "Full functionality without connectivity. Data syncs when available.",
+                icon: Shield,
             },
         ],
     },
     {
         category: "Security",
         icon: Shield,
-        color: "text-neon-purple",
-        bgColor: "bg-neon-purple/5",
-        borderColor: "border-neon-purple/20",
         items: [
             {
                 name: "End-to-End Encryption",
-                description:
-                    "AES-256 encryption from device to cloud. Keys never leave your control.",
-                icon: LockIcon
+                description: "AES-256 encryption from device to cloud. Keys never leave your control.",
+                icon: Lock,
             },
             {
                 name: "Secure Enclave",
-                description:
-                    "Sensitive computations isolated in hardware-protected memory regions.",
-                icon: Shield
+                description: "Sensitive computations isolated in hardware-protected memory regions.",
+                icon: Shield,
             },
             {
                 name: "Audit Logging",
-                description:
-                    "Immutable logs of all data access for compliance and transparency.",
-                icon: FileJson
+                description: "Immutable logs of all data access for compliance and transparency.",
+                icon: FileJson,
             },
         ],
     },
@@ -94,163 +81,204 @@ const specifications = [
     { label: "Connectivity", value: "Bluetooth 5.0 LE" },
 ];
 
-function LockIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-        </svg>
-    )
-}
-
 export default function TechnologyPage() {
     return (
-        <div className="min-h-screen pt-24 pb-20 relative overflow-hidden">
-            {/* Ambient Background Effects */}
-            <div className="fixed top-0 right-0 w-full h-[500px] bg-gradient-to-b from-neon-cyan/5 via-transparent to-transparent pointer-events-none" />
+        <div className="min-h-screen">
+            {/* Hero Section - Dark */}
+            <section className="min-h-[70vh] pt-24 pb-20 bg-surface-950 relative overflow-hidden flex items-center">
+                <div className="section-container relative z-10">
+                    <motion.div {...scrollReveal}>
+                        <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">
+                            Core <span className="text-emerald-gradient">Technology</span>
+                        </h1>
+                        <p className="text-body-lg md:text-xl text-text-secondary font-extralight max-w-2xl leading-relaxed">
+                            A deep dive into the engineering choices that make OneSync possible.
+                            Built for reliability, privacy, and transparency.
+                        </p>
+                    </motion.div>
+                </div>
+            </section>
 
-            <div className="max-w-7xl mx-auto relative z-10 px-4 md:px-6">
-                {/* Hero Section */}
-                <div className="mb-20 md:mb-32">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-                        <div>
-                            <h1 className="text-5xl md:text-7xl font-display font-black tracking-tight text-white mb-6 uppercase">
-                                Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Technology</span>
-                            </h1>
-                            <div className="h-1 w-32 bg-white mb-8 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]"></div>
-                            <p className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl leading-relaxed">
-                                A deep dive into the engineering choices that make OneSync possible.
-                                Built for <span className="text-neon-cyan">reliability</span>, <span className="text-neon-purple">privacy</span>, and <span className="text-white">transparency</span>.
-                            </p>
-                        </div>
+            {/* Tech Stack Section - Light */}
+            <section className="py-section-lg relative overflow-hidden bg-light-bg">
+                <BackgroundText text="TECHNOLOGY" position="top" direction="right" speed={0.4} />
 
-                        <div className="hidden md:block">
-                            <div className="p-4 rounded-lg bg-obsidian-900/80 border border-white/10 backdrop-blur-md">
-                                <div className="text-xs font-mono text-gray-500 mb-1">CURRENT VERSION</div>
-                                <div className="text-xl font-mono text-neon-cyan">v2.4.0-stable</div>
-                            </div>
-                        </div>
+                <div className="section-container relative z-10">
+                    <div className="space-y-24">
+                        {techStack.map((category, categoryIndex) => (
+                            <motion.div
+                                key={category.category}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: categoryIndex * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                {/* Category Header */}
+                                <div className="flex items-center gap-4 mb-12">
+                                    <div className="w-12 h-12 rounded-full bg-emerald/10 flex items-center justify-center">
+                                        <category.icon className="w-6 h-6 text-emerald" />
+                                    </div>
+                                    <h2 className="font-display text-h1 md:text-display text-text-dark font-light">
+                                        {category.category}
+                                    </h2>
+                                    <motion.div
+                                        initial={{ scaleX: 0 }}
+                                        whileInView={{ scaleX: 1 }}
+                                        transition={{ duration: 0.8, delay: 0.3 }}
+                                        viewport={{ once: true }}
+                                        className="flex-1 h-px bg-gradient-to-r from-light-border to-transparent origin-left ml-4"
+                                    />
+                                </div>
+
+                                {/* Category Items */}
+                                <motion.div
+                                    variants={staggerReveal}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    className="grid md:grid-cols-3 gap-x-12 gap-y-10"
+                                >
+                                    {category.items.map((item) => (
+                                        <motion.div
+                                            key={item.name}
+                                            variants={staggerRevealItem}
+                                            className="group"
+                                        >
+                                            <div className="mb-4">
+                                                <item.icon className="w-6 h-6 text-emerald/60 group-hover:text-emerald transition-colors" />
+                                            </div>
+                                            <h3 className="text-lg font-light text-text-dark mb-2 group-hover:text-emerald transition-colors">
+                                                {item.name}
+                                            </h3>
+                                            <p className="text-sm text-text-dark-muted font-light leading-relaxed">
+                                                {item.description}
+                                            </p>
+                                        </motion.div>
+                                    ))}
+                                </motion.div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
+            </section>
 
-                {/* Tech Stack */}
-                <div className="space-y-12 mb-24 md:mb-32">
-                    {techStack.map((category, index) => (
-                        <div key={index} className="group">
-                            <div className="flex items-center gap-4 mb-8">
-                                <div className={`p-3 rounded-xl bg-obsidian-900 border border-white/10 ${category.color}`}>
-                                    <category.icon className="h-6 w-6" />
-                                </div>
-                                <h2 className="text-3xl font-display font-bold text-white uppercase tracking-wide">
-                                    {category.category}
-                                </h2>
-                                <div className={`h-px flex-1 bg-gradient-to-r from-white/10 to-transparent ml-4`}></div>
+            {/* Specifications Section - Light */}
+            <section className="py-section-lg relative overflow-hidden bg-light-bg">
+                <BackgroundText text="SPECS" position="center" direction="left" speed={0.3} />
+
+                <div className="section-container relative z-10">
+                    <motion.div {...scrollReveal} className="text-center mb-16">
+                        <SectionLabel>Specifications</SectionLabel>
+                        <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
+                            Technical <span className="text-emerald-gradient">Details</span>
+                        </h2>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-8 max-w-4xl mx-auto"
+                    >
+                        {specifications.map((spec, index) => (
+                            <div key={spec.label} className="group text-center md:text-left">
+                                <p className="text-xs text-text-dark-muted font-light uppercase tracking-wider mb-1">
+                                    {spec.label}
+                                </p>
+                                <p className="text-lg text-text-dark font-light group-hover:text-emerald transition-colors">
+                                    {spec.value}
+                                </p>
                             </div>
-
-                            <div className="grid md:grid-cols-3 gap-6">
-                                {category.items.map((item, itemIndex) => (
-                                    <div
-                                        key={itemIndex}
-                                        className={`relative p-6 rounded-2xl bg-obsidian-900/40 border border-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-obsidian-800/60 hover:border-white/10 group/item hover:translate-y-[-4px]`}
-                                    >
-                                        <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-transparent to-transparent group-hover/item:via-${category.color.replace('text-', '')} opacity-50`}></div>
-
-                                        <div className="mb-4">
-                                            <item.icon className={`w-8 h-8 ${category.color} opacity-80`} />
-                                        </div>
-
-                                        <h3 className="font-display font-bold text-white mb-3 text-lg">{item.name}</h3>
-                                        <p className="text-gray-400 text-sm leading-relaxed font-light">{item.description}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </motion.div>
                 </div>
+            </section>
 
-                {/* Specifications HUD */}
-                <div className="mb-24 md:mb-32">
-                    <h2 className="text-2xl font-display font-bold text-white mb-8 border-l-4 border-neon-cyan pl-4 uppercase">
-                        Technical Specifications
-                    </h2>
+            {/* Philosophy Section - Light */}
+            <section className="py-section-lg relative overflow-hidden bg-light-bg">
+                <div className="section-container relative z-10">
+                    <motion.div {...scrollReveal} className="text-center mb-20">
+                        <SectionLabel>Philosophy</SectionLabel>
+                        <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
+                            Why We <span className="text-emerald-gradient">Build This Way</span>
+                        </h2>
+                    </motion.div>
 
-                    <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-obsidian-950/80">
-                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
-                        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:32px_32px]"></div>
-
-                        <div className="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/5">
-                            {specifications.map((spec, index) => (
-                                <div key={index} className="p-8 hover:bg-white/[0.02] transition-colors group">
-                                    <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-2 group-hover:text-neon-cyan transition-colors">
-                                        {spec.label}
-                                    </div>
-                                    <div className="text-xl md:text-2xl font-mono text-white">
-                                        {spec.value}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-
-                {/* Philosophy */}
-                <div className="grid md:grid-cols-2 gap-8">
-                    <Card className="border-neon-cyan/20 bg-gradient-to-br from-obsidian-900 to-obsidian-950 overflow-hidden group">
-                        <div className="absolute -right-10 -top-10 w-40 h-40 bg-neon-cyan/10 rounded-full blur-3xl group-hover:bg-neon-cyan/20 transition-all duration-700"></div>
-
-                        <CardContent className="p-8 md:p-10 relative z-10">
+                    <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="group"
+                        >
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="p-3 bg-neon-cyan/10 rounded-lg text-neon-cyan">
-                                    <Zap className="h-8 w-8" />
+                                <div className="w-10 h-10 rounded-full bg-emerald/10 flex items-center justify-center group-hover:bg-emerald/20 transition-colors">
+                                    <Zap className="w-5 h-5 text-emerald" />
                                 </div>
-                                <h3 className="text-2xl font-display font-bold text-white uppercase tracking-tight">
+                                <h3 className="text-xl font-light text-text-dark">
                                     Why Edge-First?
                                 </h3>
                             </div>
-                            <p className="text-gray-300 leading-loose text-lg font-light">
+                            <p className="text-text-dark-secondary font-light leading-relaxed">
                                 Moving computation to the edge isn't just about privacy — it's
                                 about creating a more reliable, responsive system. When your
                                 insights don't depend on connectivity, they're always available
                                 when you need them. This architecture also enables features that
                                 would be impractical with cloud-only processing.
                             </p>
-                        </CardContent>
-                    </Card>
+                        </motion.div>
 
-                    <Card className="border-neon-purple/20 bg-gradient-to-br from-obsidian-900 to-obsidian-950 overflow-hidden group">
-                        <div className="absolute -right-10 -top-10 w-40 h-40 bg-neon-purple/10 rounded-full blur-3xl group-hover:bg-neon-purple/20 transition-all duration-700"></div>
-
-                        <CardContent className="p-8 md:p-10 relative z-10">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            viewport={{ once: true }}
+                            className="group"
+                        >
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="p-3 bg-neon-purple/10 rounded-lg text-neon-purple">
-                                    <Code className="h-8 w-8" />
+                                <div className="w-10 h-10 rounded-full bg-emerald/10 flex items-center justify-center group-hover:bg-emerald/20 transition-colors">
+                                    <Code className="w-5 h-5 text-emerald" />
                                 </div>
-                                <h3 className="text-2xl font-display font-bold text-white uppercase tracking-tight">
+                                <h3 className="text-xl font-light text-text-dark">
                                     Designed for Extensibility
                                 </h3>
                             </div>
-                            <p className="text-gray-300 leading-loose text-lg font-light">
+                            <p className="text-text-dark-secondary font-light leading-relaxed">
                                 The OneSync architecture is built to evolve. New sensor
                                 modalities, updated ML models, and enhanced features can be
                                 deployed via secure OTA updates. The system is designed to grow
                                 with advances in wearable computing while maintaining backward
                                 compatibility and data integrity.
                             </p>
-                        </CardContent>
-                    </Card>
+                        </motion.div>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            {/* CTA Section - Light */}
+            <section className="py-section-lg relative overflow-hidden bg-light-bg">
+                <BackgroundText text="EXPLORE" position="center" direction="right" speed={0.3} />
+
+                <div className="section-container text-center relative z-10">
+                    <motion.div {...scrollReveal}>
+                        <h2 className="font-display text-display md:text-display-lg text-text-dark font-light mb-6">
+                            See It In <span className="text-emerald-gradient">Action</span>
+                        </h2>
+                        <p className="text-body-lg text-text-dark-secondary font-light mb-10 max-w-xl mx-auto">
+                            Explore the product that brings this technology to life.
+                        </p>
+                        <motion.a
+                            href="/product"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="group inline-flex items-center gap-3 px-8 py-4 bg-emerald text-white font-light rounded-full hover:bg-emerald-light transition-colors"
+                        >
+                            View Product
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </motion.a>
+                    </motion.div>
+                </div>
+            </section>
         </div>
     );
 }

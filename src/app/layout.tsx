@@ -1,36 +1,49 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono, Roboto_Condensed } from "next/font/google";
+import { Space_Grotesk, Outfit, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { GradientMesh } from "@/components/backgrounds/GradientMesh";
+import { SmoothScroll } from "@/components/providers/SmoothScroll";
 
-const inter = Inter({
+// Premium display font - for headings and hero text
+const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],
-    variable: "--font-inter",
+    variable: "--font-display",
     display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+// Premium body font - clean and modern
+const outfit = Outfit({
     subsets: ["latin"],
-    variable: "--font-jetbrains-mono",
+    variable: "--font-sans",
     display: "swap",
 });
 
-const robotoCondensed = Roboto_Condensed({
+const spaceMono = Space_Mono({
+    weight: ["400", "700"],
     subsets: ["latin"],
-    variable: "--font-roboto-condensed",
+    variable: "--font-mono",
     display: "swap",
 });
 
 export const metadata: Metadata = {
-    title: "OneSync - Data Scientist Command Center",
-    description: "Edge-first intelligence. Conditional inference. Privacy by design.",
+    title: "OneSync - OneBand | Beyond Vital Signs. Into the Mind",
+    description: "Make Calm Measurable. Make Clarity Trainable. A wearable designed to disappear until you need it.",
+    keywords: ["wearable", "health tech", "mental wellness", "biometrics", "OneBand", "OneSync"],
+    authors: [{ name: "OneSync" }],
+    openGraph: {
+        title: "OneSync - OneBand",
+        description: "Beyond Vital Signs. Into the Mind.",
+        type: "website",
+    },
 };
 
 export const viewport: Viewport = {
     width: "device-width",
     initialScale: 1,
     maximumScale: 5,
+    themeColor: "#0a0a0a",
 };
 
 export default function RootLayout({
@@ -39,16 +52,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className="scroll-smooth">
             <body
-                className={`${inter.variable} ${jetbrainsMono.variable} ${robotoCondensed.variable} font-sans antialiased bg-obsidian-950 text-gray-300 overflow-x-hidden`}
+                className={`${outfit.variable} ${spaceGrotesk.variable} ${spaceMono.variable} font-sans antialiased bg-surface-950 text-text-secondary overflow-x-hidden`}
             >
-                {/* Global Noise Overlay */}
-                <div className="fixed inset-0 z-[9999] pointer-events-none opacity-[0.03] mix-blend-overlay bg-[url('/noise.svg')]" />
-
-                <Header />
-                <main className="min-h-screen pt-24">{children}</main>
-                <Footer />
+                <SmoothScroll>
+                    <GradientMesh />
+                    <Header />
+                    <main className="relative z-10 min-h-screen">{children}</main>
+                    <Footer />
+                </SmoothScroll>
             </body>
         </html>
     );
