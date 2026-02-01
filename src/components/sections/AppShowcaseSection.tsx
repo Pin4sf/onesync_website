@@ -9,9 +9,9 @@ import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, appPerspective, staggerReveal, staggerRevealItem } from "@/lib/motion";
 
 const features = [
-    { text: "Not Tracking, But", highlight: "Prediction" },
-    { text: "Digital Twin", highlight: null },
-    { text: "AI Driven", highlight: "Cognition" },
+    { text: "Continuous", highlight: "Performance Loop" },
+    { text: "Personal", highlight: "Digital Twin" },
+    { text: "Actionable", highlight: "Guidance" },
 ];
 
 // Set to true when real app screenshots are available
@@ -61,7 +61,7 @@ export function AppShowcaseSection() {
                         Your Mind, <span className="text-emerald-gradient">Visualized</span>
                     </h2>
                     <p className="text-body-lg text-text-dark-secondary font-light max-w-2xl mx-auto">
-                        Transform raw neural data into actionable insights
+                        Readiness, recovery, effort, and focus — turned into clear daily actions
                     </p>
                 </motion.div>
 

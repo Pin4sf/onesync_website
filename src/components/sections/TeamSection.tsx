@@ -12,28 +12,28 @@ const team = [
     {
         name: "Ark Patil",
         role: "The Visionary",
-        description: "Product & Strategy",
+        description: "CEO · Biosensing & Performance",
         image: "/team/Ark.jpeg",
         linkedIn: "https://linkedin.com/in/arkpatil",
     },
     {
         name: "Shivansh Fulper",
-        role: "The Tech Guy",
-        description: "Engineering & AI",
+        role: "The Architect",
+        description: "CTO · AI & Systems",
         image: "/team/Shivansh.png",
         linkedIn: "https://linkedin.com/in/shivanshfulper",
     },
     {
         name: "Ansh Bathija",
         role: "The Operator",
-        description: "Operations & Growth",
+        description: "COO · Manufacturing & Ops",
         image: null,
         linkedIn: "https://linkedin.com/in/anshbathija",
     },
     {
         name: "Mayur Kumar",
-        role: "Brings Ideas to Life",
-        description: "Design & Experience",
+        role: "The Builder",
+        description: "CPO · Product & Hardware",
         image: "/team/Mayur.png",
         linkedIn: "https://linkedin.com/in/mayurkumar",
     },
@@ -59,7 +59,7 @@ export function TeamSection() {
                     </h2>
 
                     <p className="text-body-lg text-text-dark-secondary font-light max-w-2xl mx-auto">
-                        Dedicated to revolutionizing mental wellness through technology
+                        Dedicated to revolutionizing mental wellness through technology. Building end-to-end — hardware, sensing, and AI.
                     </p>
                 </motion.div>
 

@@ -77,7 +77,7 @@ const techStack = [
 const specifications = [
     { label: "Processor", value: "High-Performance ARM Core", description: "Optimized for on-device AI", icon: Cpu },
     { label: "Memory", value: "Ample Storage", description: "Weeks of data on-device", icon: Server },
-    { label: "Sensors", value: "Medical-Grade Array", description: "Heart, motion, temperature & more", icon: Activity },
+    { label: "Sensors", value: "Advanced Sensor Array", description: "Heart, motion, temperature & more", icon: Activity },
     { label: "Battery Life", value: "Week-Long Power", description: "Go days between charges", icon: Zap },
     { label: "Water Resistance", value: "Fully Waterproof", description: "Swim, shower, sweat", icon: Shield },
     { label: "Connectivity", value: "Instant Sync", description: "Latest Bluetooth technology", icon: Wifi },
@@ -205,24 +205,22 @@ export default function TechnologyPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.05 }}
                                 viewport={{ once: true }}
-                                className="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-6 transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:shadow-2xl hover:shadow-emerald/20"
+                                className="group relative overflow-hidden rounded-[20px] bg-white/60 backdrop-blur-[40px] backdrop-saturate-[180%] border border-black/[0.04] shadow-[0_2px_20px_rgba(0,0,0,0.04)] p-6 transition-all duration-300 ease-out hover:bg-white/80 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
                             >
-                                {/* Liquid glass reflection gradient */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-60" />
-                                {/* Bottom edge glow */}
-                                <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-                                {/* Hover gradient */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-emerald/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                {/* Light mode top highlight */}
+                                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+                                {/* Hover glow */}
+                                <div className="absolute inset-0 rounded-[20px] bg-emerald/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                                 <div className="relative z-10">
                                     {/* Icon */}
-                                    <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-4 group-hover:bg-emerald/20 transition-colors border border-white/10">
+                                    <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center mb-4 group-hover:bg-emerald/10 transition-colors">
                                         <spec.icon className="w-5 h-5 text-emerald" />
                                     </div>
                                     <p className="text-xs text-emerald font-medium uppercase tracking-wider mb-2">
                                         {spec.label}
                                     </p>
-                                    <p className="text-xl text-slate-800 font-light mb-2 group-hover:text-emerald transition-colors">
+                                    <p className="text-xl text-slate-900 font-light mb-2 group-hover:text-emerald transition-colors">
                                         {spec.value}
                                     </p>
                                     <p className="text-sm text-slate-600 font-light">

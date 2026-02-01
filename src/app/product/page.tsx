@@ -34,7 +34,7 @@ const features = [
     {
         icon: Heart,
         title: "Advanced HRV Analysis",
-        description: "Medical-grade heart rate variability tracking for deep insights.",
+        description: "Advanced heart rate variability tracking for deep insights.",
     },
     {
         icon: Shield,
@@ -66,7 +66,7 @@ const bentoSpecs = [
         highlight: "Waterproof",
     },
     {
-        title: "Medical-Grade Sensors",
+        title: "Advanced Sensors",
         description: "Advanced biosensors for heart rate, temperature, and more",
         icon: Activity,
         size: "medium",
@@ -224,26 +224,26 @@ export default function ProductPage() {
                                 transition={{ delay: index * 0.05 }}
                                 viewport={{ once: true }}
                                 className={`
-                                    group relative overflow-hidden rounded-2xl
-                                    bg-white/10 backdrop-blur-xl border border-white/20
-                                    p-6 transition-all duration-300
-                                    hover:bg-white/15 hover:border-white/30 hover:shadow-2xl hover:shadow-emerald/20
+                                    group relative overflow-hidden rounded-[20px]
+                                    bg-white/60 backdrop-blur-[40px] backdrop-saturate-[180%]
+                                    border border-black/[0.04]
+                                    shadow-[0_2px_20px_rgba(0,0,0,0.04)]
+                                    p-6 transition-all duration-300 ease-out
+                                    hover:bg-white/80 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]
                                     ${spec.size === 'large' ? 'col-span-2 row-span-2' : ''}
                                     ${spec.size === 'medium' ? 'col-span-2' : ''}
                                 `}
                             >
-                                {/* Liquid glass reflection gradient */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-60" />
-                                {/* Bottom edge glow */}
-                                <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-                                {/* Hover gradient */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-emerald/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                {/* Light mode top highlight */}
+                                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+                                {/* Hover glow */}
+                                <div className="absolute inset-0 rounded-[20px] bg-emerald/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                                 <div className="relative z-10 h-full flex flex-col">
                                     {/* Icon */}
                                     <div className={`
-                                        w-10 h-10 rounded-xl bg-emerald/10 flex items-center justify-center mb-4
-                                        group-hover:bg-emerald/20 transition-colors
+                                        w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center mb-4
+                                        group-hover:bg-emerald/10 transition-colors
                                         ${spec.size === 'large' ? 'w-14 h-14' : ''}
                                     `}>
                                         <spec.icon className={`text-emerald ${spec.size === 'large' ? 'w-7 h-7' : 'w-5 h-5'}`} />
@@ -256,7 +256,7 @@ export default function ProductPage() {
 
                                     {/* Title */}
                                     <h3 className={`
-                                        font-light text-slate-800 mb-2 group-hover:text-emerald transition-colors
+                                        font-light text-slate-900 mb-2 group-hover:text-emerald transition-colors
                                         ${spec.size === 'large' ? 'text-2xl' : 'text-lg'}
                                     `}>
                                         {spec.title}
