@@ -6,7 +6,6 @@ import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { BackgroundText } from "@/components/ui/BackgroundText";
 import { DotGrid } from "@/components/backgrounds/DotGrid";
-import { ModelViewer } from "@/components/ui/ModelViewer";
 import { AppPreview } from "@/components/ui/AppPreview";
 import { fadeInUp, staggerReveal, staggerRevealItem, scrollReveal } from "@/lib/motion";
 import { Battery, Droplets, Activity, Brain, Heart, Zap, Shield, Smartphone, ArrowRight } from "lucide-react";
@@ -118,17 +117,17 @@ export default function ProductPage() {
                 </div>
 
                 <div className="section-container relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[70vh]">
-                        <motion.div {...fadeInUp}>
+                    <div className="flex items-center justify-center min-h-[70vh]">
+                        <motion.div {...fadeInUp} className="text-center max-w-3xl">
                             <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">
                                 <span className="text-emerald-gradient">ONEBAND</span>
                             </h1>
-                            <p className="text-body-lg text-text-secondary font-extralight mb-8 leading-relaxed max-w-lg">
+                            <p className="text-body-lg text-text-secondary font-extralight mb-8 leading-relaxed mx-auto">
                                 A wearable that learns your physiology, movement, and cognitive patterns —
                                 then turns it into a continuous performance loop for readiness, recovery,
                                 effort, and focus. Your personal performance model, always with you.
                             </p>
-                            <div className="flex flex-wrap gap-4">
+                            <div className="flex flex-wrap gap-4 justify-center">
                                 <motion.a
                                     href="mailto:contact@onesync.io"
                                     whileHover={{ scale: 1.02 }}
@@ -147,26 +146,6 @@ export default function ProductPage() {
                                     View Technology
                                 </motion.a>
                             </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative hidden lg:block"
-                        >
-                            {/* Subtle glow effect behind the model */}
-                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div className="w-80 h-80 bg-emerald/20 rounded-full blur-[100px]" />
-                            </div>
-
-                            {/* 3D Model with dramatic rim lighting */}
-                            <ModelViewer
-                                modelUrl="/3d/object_0.glb"
-                                className="w-full h-[500px]"
-                                autoRotate={true}
-                                dramaticLighting={true}
-                            />
                         </motion.div>
                     </div>
                 </div>

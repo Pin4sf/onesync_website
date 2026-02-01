@@ -59,20 +59,10 @@ export function Header() {
                                     className={cn(
                                         "relative px-4 py-2 text-sm font-light transition-colors",
                                         isScrolled
-                                            ? isActive ? "text-text-dark" : "text-text-dark-muted hover:text-text-dark"
-                                            : isActive ? "text-text-primary" : "text-text-muted hover:text-text-primary"
+                                            ? isActive ? "text-emerald font-medium" : "text-text-dark-muted hover:text-text-dark"
+                                            : isActive ? "text-emerald font-medium" : "text-text-muted hover:text-text-primary"
                                     )}
                                 >
-                                    {isActive && (
-                                        <motion.div
-                                            layoutId="nav-pill"
-                                            className={cn(
-                                                "absolute inset-0 rounded-lg -z-10",
-                                                isScrolled ? "bg-neutral-100" : "bg-white/10"
-                                            )}
-                                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                                        />
-                                    )}
                                     {item.name}
                                 </Link>
                             </li>

@@ -39,7 +39,7 @@ export function HeroSection() {
     return (
         <section
             ref={sectionRef}
-            className="relative min-h-[150vh] overflow-hidden"
+            className="relative min-h-[125vh] overflow-hidden"
         >
             {/* Sticky container for hero content */}
             <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center">
@@ -57,7 +57,7 @@ export function HeroSection() {
                             playsInline
                             preload="metadata"
                             poster="/product/oneband-hero.png"
-                            className="absolute inset-0 w-full h-full object-cover object-[center_55%] xl:object-[center_60%]"
+                            className="absolute inset-0 w-full h-full object-cover object-[center_35%] xl:object-[center_35%]"
                         >
                             {/* WebM first (smaller, better compression) */}
                             <source src="/video/Oneband.webm" type="video/webm" />
@@ -69,7 +69,7 @@ export function HeroSection() {
                             src="/product/oneband-hero.png"
                             alt="OneBand"
                             fill
-                            className="object-cover object-center lg:object-[center_55%] xl:object-[center_60%]"
+                            className="object-cover object-center lg:object-[center_35%] xl:object-[center_35%]"
                             priority
                             quality={95}
                         />
