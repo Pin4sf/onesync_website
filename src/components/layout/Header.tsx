@@ -74,7 +74,7 @@ export function Header() {
                 {/* Desktop CTA */}
                 <div className="hidden md:block">
                     <Link
-                        href="mailto:contact@onesync.io"
+                        href="mailto:01nesync@gmail.com"
                         className="inline-flex items-center gap-2 text-sm font-light text-white bg-emerald px-5 py-2.5 rounded-full hover:bg-emerald-light transition-colors"
                     >
                         Contact Us
@@ -120,7 +120,7 @@ export function Header() {
                             ))}
                             <div className="pt-4 mt-4 border-t border-neutral-200">
                                 <Link
-                                    href="mailto:contact@onesync.io"
+                                    href="mailto:01nesync@gmail.com"
                                     className="block text-center text-sm font-light text-white bg-emerald px-5 py-3 rounded-full hover:bg-emerald-light transition-colors"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >

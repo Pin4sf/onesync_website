@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { scrollReveal } from "@/lib/motion";
 import { BackgroundText } from "@/components/ui/BackgroundText";
-import { ArrowRight, Mail, FileText } from "lucide-react";
+import { ArrowRight, Mail, FileText, TrendingUp } from "lucide-react";
 
 export function CTASection() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -46,10 +46,10 @@ export function CTASection() {
                     </p>
 
                     {/* CTA Buttons - cleaner */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
                         {/* Primary CTA */}
                         <motion.a
-                            href="mailto:contact@onesync.io"
+                            href="mailto:01nesync@gmail.com"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             className="group inline-flex items-center gap-3 px-8 py-4 bg-emerald text-white font-light rounded-full hover:bg-emerald-light transition-colors touch-target"
@@ -59,9 +59,23 @@ export function CTASection() {
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </motion.a>
 
-                        {/* Secondary CTA */}
+                        {/* For Investors CTA */}
                         <motion.a
-                            href="#"
+                            href="/investor"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="group inline-flex items-center gap-3 px-8 py-4 border border-emerald/30 text-emerald font-light rounded-full hover:bg-emerald/5 transition-colors touch-target"
+                        >
+                            <TrendingUp className="w-4 h-4" />
+                            For Investors
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </motion.a>
+
+                        {/* Pitch Deck CTA */}
+                        <motion.a
+                            href="https://drive.google.com/file/d/1Kmd4depasXneVOiyTcUm8H7oSps5MxiP/view?usp=drive_link"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             className="group inline-flex items-center gap-3 px-8 py-4 text-text-dark font-light hover:text-emerald transition-colors touch-target"

@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { heroAnimations } from "@/lib/motion";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronRight, FileText } from "lucide-react";
 
 // Set to true when product image is ready at /public/product/oneband-hero.png
 const HAS_PRODUCT_IMAGE = true;
@@ -103,6 +103,20 @@ export function HeroSection() {
                         Beyond Vital Signs. Into the Mind
                     </motion.p>
                 </motion.div>
+
+                {/* Pitch Deck Button - Bottom Left */}
+                <motion.a
+                    href="https://drive.google.com/file/d/1Kmd4depasXneVOiyTcUm8H7oSps5MxiP/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1.2, duration: 0.6 }}
+                    className="group absolute bottom-12 left-8 md:left-16 z-10 inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors duration-300"
+                >
+                    <FileText className="w-4 h-4" />
+                    <span className="uppercase tracking-widest">Pitch Deck</span>
+                </motion.a>
 
                 {/* Explore Button - Bottom Right */}
                 <motion.a

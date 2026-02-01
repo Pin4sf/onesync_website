@@ -35,7 +35,7 @@ const team = [
         role: "The Builder",
         description: "CPO · Product & Hardware",
         image: "/team/Mayur.png",
-        linkedIn: "https://linkedin.com/in/mayurkumar",
+        linkedIn: "https://www.linkedin.com/in/mayurrkr/",
     },
 ];
 

@@ -6,7 +6,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { BackgroundText } from "@/components/ui/BackgroundText";
 import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
-import { Linkedin, Twitter, Mail, ArrowRight } from "lucide-react";
+import { Linkedin, Mail, ArrowRight } from "lucide-react";
 
 const teamMembers = [
     {
@@ -15,7 +15,6 @@ const teamMembers = [
         bio: "Systems engineer with deep R&D expertise in biosensing and human performance. Won ISSS Awards 2025 at IISc Bangalore for a non-invasive sweat-analysis wearable. National level athlete with competitive training discipline that carries into building.",
         image: "/team/Ark.jpeg",
         linkedin: "https://linkedin.com/in/arkpatil",
-        twitter: "https://twitter.com",
         email: "ark@onesync.io",
     },
     {
@@ -24,7 +23,6 @@ const teamMembers = [
         bio: "Core contributor to Project EKA (IndiaAI Mission) 120B Indic MoE LLM. Built large-scale dataset curation pipelines and shipped ML systems in open-source and industry. Leads AI architecture and technical vision.",
         image: "/team/Shivansh.png",
         linkedin: "https://linkedin.com/in/shivanshfulper",
-        twitter: "https://twitter.com",
         email: "shivansh@onesync.io",
     },
     {
@@ -33,7 +31,6 @@ const teamMembers = [
         bio: "Led SUPRA SAE aero redesign under a 16-day constraint achieving AIR 16 in Engineering Design. Built Clariflo, an electricity-free purification system under IP filing. Drives operational excellence and manufacturing strategy.",
         image: null,
         linkedin: "https://linkedin.com/in/anshbathija",
-        twitter: "https://twitter.com",
         email: "ansh@onesync.io",
     },
     {
@@ -41,8 +38,7 @@ const teamMembers = [
         role: "Chief Product Officer",
         bio: "Built and patented multiple assistive and wearable products. Special Jury Mention at IIT Jammu Invention Factory. Division-I level weightlifter bringing execution discipline to product development and user experience.",
         image: "/team/Mayur.png",
-        linkedin: "https://linkedin.com/in/mayurkumar",
-        twitter: "https://twitter.com",
+        linkedin: "https://www.linkedin.com/in/mayurrkr/",
         email: "mayur@onesync.io",
     },
 ];
@@ -147,15 +143,6 @@ export default function TeamPage() {
                                                 <Linkedin className="w-4 h-4" />
                                             </a>
                                             <a
-                                                href={member.twitter}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-text-dark-muted hover:text-emerald hover:bg-emerald/10 transition-colors"
-                                                aria-label={`${member.name}'s Twitter`}
-                                            >
-                                                <Twitter className="w-4 h-4" />
-                                            </a>
-                                            <a
                                                 href={`mailto:${member.email}`}
                                                 className="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-text-dark-muted hover:text-emerald hover:bg-emerald/10 transition-colors"
                                                 aria-label={`Email ${member.name}`}
@@ -233,7 +220,7 @@ export default function TeamPage() {
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </motion.a>
                             <motion.a
-                                href="mailto:contact@onesync.io"
+                                href="mailto:01nesync@gmail.com"
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className="inline-flex items-center gap-2 px-8 py-4 text-text-dark font-light hover:text-emerald transition-colors"

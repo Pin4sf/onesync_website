@@ -178,14 +178,14 @@ export function Footer() {
                         </h4>
                         <div className="space-y-4">
                             <AnimatedLink
-                                href="mailto:contact@onesync.io"
+                                href="mailto:01nesync@gmail.com"
                                 className="text-text-dark-secondary text-sm font-light"
                             >
-                                contact@onesync.io
+                                01nesync@gmail.com
                             </AnimatedLink>
                             <div>
                                 <AnimatedLink
-                                    href="mailto:contact@onesync.io"
+                                    href="mailto:01nesync@gmail.com"
                                     className="text-text-dark-secondary text-sm font-light"
                                     showArrow
                                 >

@@ -129,7 +129,7 @@ export default function ProductPage() {
                             </p>
                             <div className="flex flex-wrap gap-4 justify-center">
                                 <motion.a
-                                    href="mailto:contact@onesync.io"
+                                    href="mailto:01nesync@gmail.com"
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     className="group inline-flex items-center gap-3 px-8 py-4 bg-emerald text-white font-light rounded-full hover:bg-emerald-light transition-colors"
@@ -331,7 +331,7 @@ export default function ProductPage() {
                             experience cognitive wellness tracking.
                         </p>
                         <motion.a
-                            href="mailto:contact@onesync.io"
+                            href="mailto:01nesync@gmail.com"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             className="group inline-flex items-center gap-3 px-8 py-4 bg-emerald text-white font-light rounded-full hover:bg-emerald-light transition-colors"
