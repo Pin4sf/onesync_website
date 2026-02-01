@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { GradientMesh } from "@/components/backgrounds/GradientMesh";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 
 // Premium display font - for headings and hero text
 const spaceGrotesk = Space_Grotesk({
@@ -57,6 +58,7 @@ export default function RootLayout({
                 className={`${outfit.variable} ${spaceGrotesk.variable} ${spaceMono.variable} font-sans antialiased bg-surface-950 text-text-secondary overflow-x-hidden`}
             >
                 <SmoothScroll>
+                    <CustomCursor />
                     <GradientMesh />
                     <Header />
                     <main className="relative z-10 min-h-screen">{children}</main>

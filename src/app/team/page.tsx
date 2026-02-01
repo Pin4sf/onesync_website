@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { BackgroundText } from "@/components/ui/BackgroundText";
+import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
 import { Linkedin, Twitter, Mail, ArrowRight } from "lucide-react";
 
@@ -85,6 +86,7 @@ export default function TeamPage() {
 
             {/* Team Grid - Light */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
+                <DotGrid opacity={10} gap={28} />
                 <BackgroundText text="TEAM" position="top" direction="right" speed={0.4} />
 
                 <div className="section-container relative z-10">
@@ -171,6 +173,7 @@ export default function TeamPage() {
 
             {/* Values - Light */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
+                <DotGrid opacity={10} gap={28} />
                 <BackgroundText text="VALUES" position="center" direction="left" speed={0.3} />
 
                 <div className="section-container relative z-10">

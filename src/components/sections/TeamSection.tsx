@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { NoiseTexture } from "@/components/backgrounds/NoiseTexture";
 import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
 import { Linkedin } from "lucide-react";
 
@@ -46,6 +47,9 @@ export function TeamSection() {
             ref={sectionRef}
             className="py-section-lg relative overflow-hidden bg-light-bg"
         >
+            {/* Film grain texture overlay */}
+            <NoiseTexture opacity={4} animated={true} />
+
             <div className="section-container relative z-10">
                 <motion.div {...scrollReveal} className="text-center mb-16">
                     <SectionLabel>The Team</SectionLabel>

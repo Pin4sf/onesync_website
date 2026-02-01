@@ -54,7 +54,7 @@ export function BackgroundText({
         >
             <motion.div
                 style={{ x }}
-                className="whitespace-nowrap font-display text-[10rem] md:text-[14rem] lg:text-[18rem] font-extralight tracking-tighter text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.06)] [text-stroke:1px_rgba(0,0,0,0.06)]"
+                className="whitespace-nowrap font-display text-[10rem] md:text-[14rem] lg:text-[18rem] font-extralight tracking-tighter text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.10)] [text-stroke:1px_rgba(0,0,0,0.10)]"
             >
                 {text} {text} {text}
             </motion.div>

@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { BackgroundText } from "@/components/ui/BackgroundText";
+import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
 import { Cpu, Wifi, Shield, Zap, Server, Code, Layers, FileJson, Activity, Lock, ArrowRight } from "lucide-react";
 
@@ -84,8 +86,22 @@ const specifications = [
 export default function TechnologyPage() {
     return (
         <div className="min-h-screen">
-            {/* Hero Section - Dark */}
+            {/* Hero Section - Dark with background image */}
             <section className="min-h-[70vh] pt-24 pb-20 bg-surface-950 relative overflow-hidden flex items-center">
+                {/* Background image from home page */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/product/oneband-prototype.png"
+                        alt=""
+                        fill
+                        className="object-cover object-center opacity-40"
+                        priority
+                    />
+                    {/* Gradient overlays */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-surface-950 via-surface-950/60 to-surface-950/40" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-transparent to-surface-950/50" />
+                </div>
+
                 <div className="section-container relative z-10">
                     <motion.div {...scrollReveal}>
                         <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">
@@ -101,6 +117,7 @@ export default function TechnologyPage() {
 
             {/* Tech Stack Section - Light */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
+                <DotGrid opacity={10} gap={28} />
                 <BackgroundText text="TECHNOLOGY" position="top" direction="right" speed={0.4} />
 
                 <div className="section-container relative z-10">
@@ -164,6 +181,7 @@ export default function TechnologyPage() {
 
             {/* Specifications Section - Light */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
+                <DotGrid opacity={10} gap={28} />
                 <BackgroundText text="SPECS" position="center" direction="left" speed={0.3} />
 
                 <div className="section-container relative z-10">

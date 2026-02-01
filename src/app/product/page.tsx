@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { BackgroundText } from "@/components/ui/BackgroundText";
+import { DotGrid } from "@/components/backgrounds/DotGrid";
+import { ModelViewer } from "@/components/ui/ModelViewer";
+import { AppPreview } from "@/components/ui/AppPreview";
 import { fadeInUp, staggerReveal, staggerRevealItem, scrollReveal } from "@/lib/motion";
 import { Battery, Droplets, Activity, Brain, Heart, Zap, Shield, Smartphone, ArrowRight } from "lucide-react";
 
@@ -57,8 +60,22 @@ export default function ProductPage() {
 
     return (
         <div className="min-h-screen">
-            {/* Hero Section - Dark */}
+            {/* Hero Section - Dark with full background image */}
             <section ref={heroRef} className="min-h-screen pt-24 pb-20 bg-surface-950 relative overflow-hidden">
+                {/* Full background product image */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/product/oneband-hero.png"
+                        alt=""
+                        fill
+                        className="object-cover object-center opacity-50"
+                        priority
+                    />
+                    {/* Gradient overlays for text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-surface-950 via-surface-950/70 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-transparent to-surface-950/40" />
+                </div>
+
                 <div className="section-container relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[70vh]">
                         <motion.div {...fadeInUp}>
@@ -95,15 +112,19 @@ export default function ProductPage() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative"
+                            className="relative hidden lg:block"
                         >
-                            <Image
-                                src="/product/oneband-prototype.png"
-                                alt="OneBand - Mental Wellness Wearable"
-                                width={600}
-                                height={600}
-                                className="w-full max-w-lg mx-auto object-contain"
-                                priority
+                            {/* Subtle glow effect behind the model */}
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <div className="w-80 h-80 bg-emerald/20 rounded-full blur-[100px]" />
+                            </div>
+
+                            {/* 3D Model with dramatic rim lighting */}
+                            <ModelViewer
+                                modelUrl="/3d/object_0.glb"
+                                className="w-full h-[500px]"
+                                autoRotate={true}
+                                dramaticLighting={true}
                             />
                         </motion.div>
                     </div>
@@ -112,6 +133,7 @@ export default function ProductPage() {
 
             {/* Features Section - Light */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
+                <DotGrid opacity={10} gap={28} />
                 <BackgroundText text="FEATURES" position="top" direction="right" speed={0.4} />
 
                 <div className="section-container relative z-10">
@@ -156,6 +178,7 @@ export default function ProductPage() {
 
             {/* Specifications Section - Light */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
+                <DotGrid opacity={10} gap={28} />
                 <BackgroundText text="SPECS" position="center" direction="left" speed={0.3} />
 
                 <div className="section-container relative z-10">
@@ -224,9 +247,7 @@ export default function ProductPage() {
                             viewport={{ once: true }}
                             className="flex justify-center"
                         >
-                            <div className="w-64 h-[500px] bg-neutral-100 rounded-[40px] flex items-center justify-center">
-                                <p className="text-text-dark-muted text-sm font-light">App Preview</p>
-                            </div>
+                            <AppPreview />
                         </motion.div>
                     </div>
                 </div>

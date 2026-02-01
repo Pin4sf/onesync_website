@@ -94,6 +94,15 @@
 }
 
 @layer utilities {
+  /* Hide scrollbar utility */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
   /* Typography utilities - All thin/light */
   .type-display {
     @apply font-sans font-light tracking-tight leading-none;
@@ -150,6 +159,24 @@
 
   .animate-marquee-reverse {
     animation: marquee-reverse linear infinite;
+  }
+
+  /* Noise/grain animation */
+  @keyframes noise {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -5%); }
+    20% { transform: translate(-10%, 5%); }
+    30% { transform: translate(5%, -10%); }
+    40% { transform: translate(-5%, 15%); }
+    50% { transform: translate(-10%, 5%); }
+    60% { transform: translate(15%, 0); }
+    70% { transform: translate(0, 10%); }
+    80% { transform: translate(-15%, 0); }
+    90% { transform: translate(10%, 5%); }
+  }
+
+  .animate-noise {
+    animation: noise 0.5s steps(10) infinite;
   }
 
   /* Selective bold for vision quotes */

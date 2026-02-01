@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { AppScreenPlaceholder } from "@/components/placeholders";
+import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, appPerspective, staggerReveal, staggerRevealItem } from "@/lib/motion";
 
 const features = [
@@ -14,28 +15,21 @@ const features = [
 ];
 
 // Set to true when real app screenshots are available
-const HAS_APP_SCREENSHOTS = false;
+const HAS_APP_SCREENSHOTS = true;
 
 const appScreens = [
     {
-        name: "Neural Analysis",
-        description: "Real-time brain activity visualization",
+        name: "Dashboard",
+        description: "Your daily wellness overview",
         variant: "neural" as const,
-        image: "/app/app-neural.png",
+        image: "/app/OneSync App Landing Screen 1.png",
         rotation: -15,
     },
     {
         name: "Analytics",
         description: "Weekly recovery trends and biometrics",
         variant: "analytics" as const,
-        image: "/app/app-analytics.png",
-        rotation: 0,
-    },
-    {
-        name: "Body Tracking",
-        description: "Full body strain and fatigue monitoring",
-        variant: "body" as const,
-        image: "/app/app-body.png",
+        image: "/app/OneSync App Landing Screen 2.png",
         rotation: 15,
     },
 ];
@@ -56,6 +50,9 @@ export function AppShowcaseSection() {
             ref={sectionRef}
             className="py-section-lg relative overflow-hidden bg-light-bg"
         >
+            {/* Dot grid background */}
+            <DotGrid opacity={10} gap={28} />
+
             <div className="section-wide relative z-10">
                 {/* Section Header */}
                 <motion.div {...scrollReveal} className="text-center mb-16">
@@ -70,12 +67,12 @@ export function AppShowcaseSection() {
 
                 {/* App Screens with 3D Perspective */}
                 <div
-                    className="relative flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0 mb-20"
+                    className="relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 mb-20"
                     style={{ perspective: 1200 }}
                 >
                     {appScreens.map((screen, index) => {
-                        const isCenter = index === 1;
-                        const yMotion = isCenter ? centerY : sideY;
+                        const isFirst = index === 0;
+                        const yMotion = isFirst ? centerY : sideY;
 
                         return (
                             <motion.div
@@ -86,11 +83,9 @@ export function AppShowcaseSection() {
                                 viewport={{ once: true }}
                                 style={{
                                     y: yMotion,
-                                    zIndex: isCenter ? 20 : 10,
+                                    zIndex: 10,
                                 }}
-                                className={`relative group ${
-                                    isCenter ? "lg:-mx-4" : "lg:first:-mr-8 lg:last:-ml-8"
-                                }`}
+                                className="relative group"
                             >
                                 {/* Phone container with 3D rotation */}
                                 <motion.div
@@ -104,9 +99,7 @@ export function AppShowcaseSection() {
                                         rotateY: screen.rotation,
                                         transformStyle: "preserve-3d",
                                     }}
-                                    className={`relative ${
-                                        isCenter ? "scale-100 lg:scale-110" : "scale-90 lg:scale-95"
-                                    }`}
+                                    className="relative scale-100"
                                 >
                                     {/* Phone frame - minimal styling */}
                                     {HAS_APP_SCREENSHOTS ? (

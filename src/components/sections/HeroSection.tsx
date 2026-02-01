@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { heroAnimations } from "@/lib/motion";
@@ -8,9 +8,23 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 
 // Set to true when product image is ready at /public/product/oneband-hero.png
 const HAS_PRODUCT_IMAGE = true;
+const HAS_HERO_VIDEO = true;
+const DESKTOP_BREAKPOINT = 1024; // lg breakpoint - video only on desktop
 
 export function HeroSection() {
     const sectionRef = useRef<HTMLElement>(null);
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    // Check if desktop on mount and resize
+    useEffect(() => {
+        const checkIsDesktop = () => {
+            setIsDesktop(window.innerWidth >= DESKTOP_BREAKPOINT);
+        };
+
+        checkIsDesktop();
+        window.addEventListener("resize", checkIsDesktop);
+        return () => window.removeEventListener("resize", checkIsDesktop);
+    }, []);
     const { scrollYProgress } = useScroll({
         target: sectionRef,
         offset: ["start start", "end start"],
@@ -29,17 +43,30 @@ export function HeroSection() {
         >
             {/* Sticky container for hero content */}
             <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center">
-                {/* Product Image - Full Background, shifted down */}
+                {/* Background Video/Image - Full Background */}
                 <motion.div
                     style={{ y: imageY, scale: imageScale }}
                     className="absolute inset-0 z-0"
                 >
-                    {HAS_PRODUCT_IMAGE ? (
+                    {/* Video on desktop, Image on mobile/tablet */}
+                    {HAS_HERO_VIDEO && isDesktop ? (
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            poster="/product/oneband-hero.png"
+                            className="absolute inset-0 w-full h-full object-cover object-[center_55%] xl:object-[center_60%]"
+                        >
+                            <source src="/video/Oneband.webm" type="video/webm" />
+                            <source src="/video/Oneband.mp4" type="video/mp4" />
+                        </video>
+                    ) : HAS_PRODUCT_IMAGE ? (
                         <Image
                             src="/product/oneband-hero.png"
                             alt="OneBand"
                             fill
-                            className="object-cover object-[center_60%]"
+                            className="object-cover object-center lg:object-[center_55%] xl:object-[center_60%]"
                             priority
                             quality={95}
                         />

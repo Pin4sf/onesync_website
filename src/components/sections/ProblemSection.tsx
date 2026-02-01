@@ -13,18 +13,21 @@ const stats = [
         suffix: "%",
         label: "Americans stressed at work",
         sublabel: "Nearly 8 in 10 employees experiencing work-related stress monthly.",
+        decimals: 0,
     },
     {
         value: 1,
         suffix: "B+",
         label: "Mental Health Disorders",
         sublabel: "Over one billion people globally living with mental health conditions.",
+        decimals: 1,
     },
     {
         value: 40,
         suffix: "%",
         label: "GenZ Anxiety Levels",
         sublabel: "Younger generations feeling stressed or anxious most of the time.",
+        decimals: 0,
     },
 ];
 
@@ -79,7 +82,8 @@ export function ProblemSection() {
                                     <AnimatedCounter
                                         value={stat.value}
                                         suffix={stat.suffix}
-                                        duration={2}
+                                        duration={2.5}
+                                        decimals={stat.decimals}
                                     />
                                 </div>
 

@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { BackgroundText } from "@/components/ui/BackgroundText";
+import { DotGrid } from "@/components/backgrounds/DotGrid";
 
 const values = [
     "Minimal by design",
@@ -29,6 +30,9 @@ export function VisionSection() {
             id="vision"
             className="py-section-lg relative overflow-hidden bg-light-bg"
         >
+            {/* Dot grid background */}
+            <DotGrid opacity={10} gap={28} />
+
             {/* Background typography */}
             <BackgroundText text="CLARITY" position="center" direction="right" speed={0.5} />
 
