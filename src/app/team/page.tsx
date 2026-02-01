@@ -12,7 +12,7 @@ const teamMembers = [
     {
         name: "Ark Patil",
         role: "Chief Executive Officer",
-        bio: "Systems engineer with deep R&D expertise in biosensing and human performance. Won ISSS Awards 2025 at IISc Bangalore for a non-invasive sweat-analysis wearable. State-level athlete with competitive training discipline that carries into building.",
+        bio: "Systems engineer with deep R&D expertise in biosensing and human performance. Won ISSS Awards 2025 at IISc Bangalore for a non-invasive sweat-analysis wearable. National level athlete with competitive training discipline that carries into building.",
         image: "/team/Ark.jpeg",
         linkedin: "https://linkedin.com/in/arkpatil",
         twitter: "https://twitter.com",
