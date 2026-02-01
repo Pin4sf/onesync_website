@@ -44,15 +44,56 @@ const features = [
     },
 ];
 
-const specs = [
-    { label: "Sensors", value: "PPG, IMU, Temperature, EDA" },
-    { label: "Processor", value: "ARM Cortex-M4F @ 64MHz" },
-    { label: "Memory", value: "256KB RAM, 1MB Flash" },
-    { label: "Battery", value: "7+ days typical use" },
-    { label: "Water Resistance", value: "5 ATM (50m)" },
-    { label: "Connectivity", value: "Bluetooth 5.0 LE" },
-    { label: "Weight", value: "< 30g" },
-    { label: "Band Material", value: "Hypoallergenic silicone" },
+const bentoSpecs = [
+    {
+        title: "Week-Long Battery",
+        description: "Go days between charges with intelligent power management",
+        icon: Battery,
+        size: "large",
+        highlight: "7+ Days",
+    },
+    {
+        title: "Featherlight Design",
+        description: "So light you'll forget you're wearing it",
+        icon: Zap,
+        size: "small",
+        highlight: "Ultra-Light",
+    },
+    {
+        title: "Swim-Ready",
+        description: "Waterproof design for any activity",
+        icon: Droplets,
+        size: "small",
+        highlight: "Waterproof",
+    },
+    {
+        title: "Medical-Grade Sensors",
+        description: "Advanced biosensors for heart rate, temperature, and more",
+        icon: Activity,
+        size: "medium",
+        highlight: "Pro Sensors",
+    },
+    {
+        title: "Smart Processing",
+        description: "On-device AI that learns and adapts to you",
+        icon: Brain,
+        size: "medium",
+        highlight: "Edge AI",
+    },
+    {
+        title: "Seamless Sync",
+        description: "Instant connection to your devices",
+        icon: Smartphone,
+        size: "small",
+        highlight: "Bluetooth",
+    },
+    {
+        title: "Skin-Safe Materials",
+        description: "Hypoallergenic silicone for all-day comfort",
+        icon: Shield,
+        size: "small",
+        highlight: "Comfort Fit",
+    },
 ];
 
 export default function ProductPage() {
@@ -176,38 +217,76 @@ export default function ProductPage() {
                 </div>
             </section>
 
-            {/* Specifications Section - Light */}
+            {/* Specifications Section - Bento Grid */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
                 <DotGrid opacity={10} gap={28} />
                 <BackgroundText text="SPECS" position="center" direction="left" speed={0.3} />
 
                 <div className="section-container relative z-10">
-                    <motion.div {...scrollReveal} className="text-center mb-20">
+                    <motion.div {...scrollReveal} className="text-center mb-16">
                         <SectionLabel>Specifications</SectionLabel>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
-                            Technical <span className="text-emerald-gradient">Details</span>
+                            Built to <span className="text-emerald-gradient">Perform</span>
                         </h2>
                     </motion.div>
 
+                    {/* Bento Grid */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="max-w-2xl mx-auto"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto"
                     >
-                        <div className="space-y-0">
-                            {specs.map((spec, index) => (
-                                <div
-                                    key={spec.label}
-                                    className="flex justify-between items-center py-5 border-b border-light-border-subtle last:border-0 group"
-                                >
-                                    <span className="text-text-dark-muted font-light">{spec.label}</span>
-                                    <span className="text-text-dark font-light group-hover:text-emerald transition-colors">
-                                        {spec.value}
+                        {bentoSpecs.map((spec, index) => (
+                            <motion.div
+                                key={spec.title}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.05 }}
+                                viewport={{ once: true }}
+                                className={`
+                                    group relative overflow-hidden rounded-2xl bg-white border border-light-border-subtle
+                                    p-6 transition-all duration-300 hover:shadow-lg hover:border-emerald/30
+                                    ${spec.size === 'large' ? 'col-span-2 row-span-2' : ''}
+                                    ${spec.size === 'medium' ? 'col-span-2' : ''}
+                                `}
+                            >
+                                {/* Hover gradient */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-emerald/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                                <div className="relative z-10 h-full flex flex-col">
+                                    {/* Icon */}
+                                    <div className={`
+                                        w-10 h-10 rounded-xl bg-emerald/10 flex items-center justify-center mb-4
+                                        group-hover:bg-emerald/20 transition-colors
+                                        ${spec.size === 'large' ? 'w-14 h-14' : ''}
+                                    `}>
+                                        <spec.icon className={`text-emerald ${spec.size === 'large' ? 'w-7 h-7' : 'w-5 h-5'}`} />
+                                    </div>
+
+                                    {/* Highlight badge */}
+                                    <span className="inline-flex self-start px-3 py-1 rounded-full bg-emerald/10 text-emerald text-xs font-medium mb-3">
+                                        {spec.highlight}
                                     </span>
+
+                                    {/* Title */}
+                                    <h3 className={`
+                                        font-light text-text-dark mb-2 group-hover:text-emerald transition-colors
+                                        ${spec.size === 'large' ? 'text-2xl' : 'text-lg'}
+                                    `}>
+                                        {spec.title}
+                                    </h3>
+
+                                    {/* Description */}
+                                    <p className={`
+                                        text-text-dark-muted font-light leading-relaxed mt-auto
+                                        ${spec.size === 'large' ? 'text-base' : 'text-sm'}
+                                    `}>
+                                        {spec.description}
+                                    </p>
                                 </div>
-                            ))}
-                        </div>
+                            </motion.div>
+                        ))}
                     </motion.div>
                 </div>
             </section>

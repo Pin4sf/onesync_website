@@ -75,12 +75,12 @@ const techStack = [
 ];
 
 const specifications = [
-    { label: "Processor", value: "ARM Cortex-M4F @ 64MHz" },
-    { label: "Memory", value: "256KB RAM, 1MB Flash" },
-    { label: "Sensors", value: "PPG, IMU, Temperature, EDA" },
-    { label: "Battery Life", value: "7+ days typical use" },
-    { label: "Water Resistance", value: "5 ATM" },
-    { label: "Connectivity", value: "Bluetooth 5.0 LE" },
+    { label: "Processor", value: "High-Performance ARM Core", description: "Optimized for on-device AI" },
+    { label: "Memory", value: "Ample Storage", description: "Weeks of data on-device" },
+    { label: "Sensors", value: "Medical-Grade Array", description: "Heart, motion, temperature & more" },
+    { label: "Battery Life", value: "Week-Long Power", description: "Go days between charges" },
+    { label: "Water Resistance", value: "Fully Waterproof", description: "Swim, shower, sweat" },
+    { label: "Connectivity", value: "Instant Sync", description: "Latest Bluetooth technology" },
 ];
 
 export default function TechnologyPage() {
@@ -179,7 +179,7 @@ export default function TechnologyPage() {
                 </div>
             </section>
 
-            {/* Specifications Section - Light */}
+            {/* Specifications Section - Card Grid */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
                 <DotGrid opacity={10} gap={28} />
                 <BackgroundText text="SPECS" position="center" direction="left" speed={0.3} />
@@ -188,7 +188,7 @@ export default function TechnologyPage() {
                     <motion.div {...scrollReveal} className="text-center mb-16">
                         <SectionLabel>Specifications</SectionLabel>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
-                            Technical <span className="text-emerald-gradient">Details</span>
+                            Built to <span className="text-emerald-gradient">Perform</span>
                         </h2>
                     </motion.div>
 
@@ -196,17 +196,32 @@ export default function TechnologyPage() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-8 max-w-4xl mx-auto"
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
                     >
                         {specifications.map((spec, index) => (
-                            <div key={spec.label} className="group text-center md:text-left">
-                                <p className="text-xs text-text-dark-muted font-light uppercase tracking-wider mb-1">
-                                    {spec.label}
-                                </p>
-                                <p className="text-lg text-text-dark font-light group-hover:text-emerald transition-colors">
-                                    {spec.value}
-                                </p>
-                            </div>
+                            <motion.div
+                                key={spec.label}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.05 }}
+                                viewport={{ once: true }}
+                                className="group relative overflow-hidden rounded-2xl bg-white border border-light-border-subtle p-6 transition-all duration-300 hover:shadow-lg hover:border-emerald/30"
+                            >
+                                {/* Hover gradient */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-emerald/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                                <div className="relative z-10">
+                                    <p className="text-xs text-emerald font-medium uppercase tracking-wider mb-2">
+                                        {spec.label}
+                                    </p>
+                                    <p className="text-xl text-text-dark font-light mb-2 group-hover:text-emerald transition-colors">
+                                        {spec.value}
+                                    </p>
+                                    <p className="text-sm text-text-dark-muted font-light">
+                                        {spec.description}
+                                    </p>
+                                </div>
+                            </motion.div>
                         ))}
                     </motion.div>
                 </div>

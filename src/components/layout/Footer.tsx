@@ -5,10 +5,10 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
-const connectLinks = [
-    { name: "Instagram", href: "https://instagram.com" },
-    { name: "LinkedIn", href: "https://linkedin.com" },
-    { name: "Twitter", href: "https://twitter.com" },
+const navLinks = [
+    { name: "Product", href: "/product" },
+    { name: "Technology", href: "/technology" },
+    { name: "Team", href: "/team" },
 ];
 
 const productInfo = {
@@ -208,13 +208,13 @@ export function Footer() {
                         </div>
                     </div>
 
-                    {/* Connect Column */}
+                    {/* Explore Column */}
                     <div>
                         <h4 className="text-xs font-light uppercase tracking-[0.2em] text-text-dark-muted mb-8">
-                            Connect
+                            Explore
                         </h4>
                         <div className="space-y-4">
-                            {connectLinks.map((link) => (
+                            {navLinks.map((link) => (
                                 <div key={link.name}>
                                     <AnimatedLink
                                         href={link.href}

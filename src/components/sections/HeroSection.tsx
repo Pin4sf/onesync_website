@@ -55,10 +55,13 @@ export function HeroSection() {
                             muted
                             loop
                             playsInline
+                            preload="metadata"
                             poster="/product/oneband-hero.png"
                             className="absolute inset-0 w-full h-full object-cover object-[center_55%] xl:object-[center_60%]"
                         >
+                            {/* WebM first (smaller, better compression) */}
                             <source src="/video/Oneband.webm" type="video/webm" />
+                            {/* MP4 fallback for Safari/older browsers */}
                             <source src="/video/Oneband.mp4" type="video/mp4" />
                         </video>
                     ) : HAS_PRODUCT_IMAGE ? (
