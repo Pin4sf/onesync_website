@@ -124,9 +124,9 @@ export default function ProductPage() {
                                 <span className="text-emerald-gradient">ONEBAND</span>
                             </h1>
                             <p className="text-body-lg text-text-secondary font-extralight mb-8 leading-relaxed max-w-lg">
-                                A wearable designed to disappear until you need it.
-                                Combining medical-grade sensors with edge computing
-                                to deliver cognitive insights that were previously impossible.
+                                A wearable that learns your physiology, movement, and cognitive patterns —
+                                then turns it into a continuous performance loop for readiness, recovery,
+                                effort, and focus. Your personal performance model, always with you.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <motion.a
@@ -245,14 +245,20 @@ export default function ProductPage() {
                                 transition={{ delay: index * 0.05 }}
                                 viewport={{ once: true }}
                                 className={`
-                                    group relative overflow-hidden rounded-2xl bg-white border border-light-border-subtle
-                                    p-6 transition-all duration-300 hover:shadow-lg hover:border-emerald/30
+                                    group relative overflow-hidden rounded-2xl
+                                    bg-white/10 backdrop-blur-xl border border-white/20
+                                    p-6 transition-all duration-300
+                                    hover:bg-white/15 hover:border-white/30 hover:shadow-2xl hover:shadow-emerald/20
                                     ${spec.size === 'large' ? 'col-span-2 row-span-2' : ''}
                                     ${spec.size === 'medium' ? 'col-span-2' : ''}
                                 `}
                             >
+                                {/* Liquid glass reflection gradient */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-60" />
+                                {/* Bottom edge glow */}
+                                <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                                 {/* Hover gradient */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-emerald/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-emerald/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                                 <div className="relative z-10 h-full flex flex-col">
                                     {/* Icon */}
@@ -271,7 +277,7 @@ export default function ProductPage() {
 
                                     {/* Title */}
                                     <h3 className={`
-                                        font-light text-text-dark mb-2 group-hover:text-emerald transition-colors
+                                        font-light text-slate-800 mb-2 group-hover:text-emerald transition-colors
                                         ${spec.size === 'large' ? 'text-2xl' : 'text-lg'}
                                     `}>
                                         {spec.title}
@@ -279,7 +285,7 @@ export default function ProductPage() {
 
                                     {/* Description */}
                                     <p className={`
-                                        text-text-dark-muted font-light leading-relaxed mt-auto
+                                        text-slate-600 font-light leading-relaxed mt-auto
                                         ${spec.size === 'large' ? 'text-base' : 'text-sm'}
                                     `}>
                                         {spec.description}

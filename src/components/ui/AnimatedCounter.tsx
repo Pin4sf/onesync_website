@@ -23,7 +23,9 @@ export function AnimatedCounter({
 }: AnimatedCounterProps) {
     const [count, setCount] = useState(0);
     const ref = useRef<HTMLSpanElement>(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    // Use a smaller margin to ensure mobile compatibility
+    // -100px can prevent triggering on small viewports
+    const isInView = useInView(ref, { once: true, margin: "-50px 0px -50px 0px" });
     const hasAnimated = useRef(false);
 
     useEffect(() => {
