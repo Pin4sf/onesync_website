@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { GradientMesh } from "@/components/backgrounds/GradientMesh";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { Analytics } from "@vercel/analytics/next";
 
 // Premium display font - for headings and hero text
 const spaceGrotesk = Space_Grotesk({
@@ -64,6 +65,7 @@ export default function RootLayout({
                     <main className="relative z-10 min-h-screen">{children}</main>
                     <Footer />
                 </SmoothScroll>
+                <Analytics />
             </body>
         </html>
     );
