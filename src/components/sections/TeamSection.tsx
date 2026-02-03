@@ -27,7 +27,7 @@ const team = [
         name: "Ansh Bathija",
         role: "The Operator",
         description: "COO · Manufacturing & Ops",
-        image: null,
+        image: "/team/ANsh.jpeg",
         linkedIn: "https://linkedin.com/in/anshbathija",
     },
     {

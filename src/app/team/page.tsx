@@ -29,7 +29,7 @@ const teamMembers = [
         name: "Ansh Bathija",
         role: "Chief Operations Officer",
         bio: "Led SUPRA SAE aero redesign under a 16-day constraint achieving AIR 16 in Engineering Design. Built Clariflo, an electricity-free purification system under IP filing. Drives operational excellence and manufacturing strategy.",
-        image: null,
+        image: "/team/ANsh.jpeg",
         linkedin: "https://linkedin.com/in/anshbathija",
         email: "ansh@onesync.io",
     },
