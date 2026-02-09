@@ -7,6 +7,7 @@ import { BackgroundText } from "@/components/ui/BackgroundText";
 import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
 import { Cpu, Wifi, Shield, Zap, Server, Code, Layers, FileJson, Activity, Lock, ArrowRight } from "lucide-react";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 const techStack = [
     {
@@ -103,6 +104,7 @@ export default function TechnologyPage() {
                 </div>
 
                 <div className="section-container relative z-10">
+                    <Breadcrumbs variant="dark" segments={[{ label: "Home", href: "/" }, { label: "Technology" }]} />
                     <motion.div {...scrollReveal}>
                         <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">
                             Core <span className="text-emerald-gradient">Technology</span>

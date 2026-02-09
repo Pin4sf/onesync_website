@@ -55,7 +55,7 @@ export function MarketSection() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="space-y-24 md:space-y-32"
+                    className="space-y-16 md:space-y-24"
                 >
                     {marketStats.map((stat, index) => (
                         <motion.div
@@ -118,20 +118,31 @@ export function MarketSection() {
                 {/* Global Market Opportunity - Featured Stat */}
                 <motion.div
                     {...scrollReveal}
-                    className="mt-32 md:mt-48 text-center relative"
+                    className="mt-20 md:mt-28 text-center relative"
                 >
-                    {/* Minimal decorative element */}
-                    <div className="relative w-24 h-24 mx-auto mb-12">
-                        <motion.div
+                    {/* Circular text decoration */}
+                    <div className="relative w-28 h-28 mx-auto mb-10">
+                        <motion.svg
                             animate={{ rotate: 360 }}
                             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                            className="absolute inset-0 rounded-full border border-dashed border-neutral-300"
-                        />
-                        <motion.div
-                            animate={{ rotate: -360 }}
-                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                            className="absolute inset-4 rounded-full border border-neutral-200"
-                        />
+                            viewBox="0 0 100 100"
+                            className="w-full h-full"
+                        >
+                            <defs>
+                                <path
+                                    id="circlePath"
+                                    d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                                />
+                            </defs>
+                            <text className="fill-neutral-300" style={{ fontSize: "8.5px", letterSpacing: "3px" }}>
+                                <textPath href="#circlePath" className="font-mono uppercase">
+                                    MARKET · OPPORTUNITY · GLOBAL ·{" "}
+                                </textPath>
+                            </text>
+                        </motion.svg>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-2 h-2 rounded-full bg-emerald/40" />
+                        </div>
                     </div>
 
                     {/* Main stat */}

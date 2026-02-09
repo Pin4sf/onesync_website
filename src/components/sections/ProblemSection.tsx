@@ -68,33 +68,29 @@ export function ProblemSection() {
                         <motion.div
                             key={stat.label}
                             variants={staggerRevealItem}
-                            className="relative"
                         >
-                            {/* Number indicator - subtle */}
-                            <div className="absolute -top-4 -left-2 text-6xl font-display font-extralight text-neutral-200 select-none">
+                            {/* Number indicator */}
+                            <div className="text-xs font-mono text-text-dark-muted/40 mb-6">
                                 {String(index + 1).padStart(2, "0")}
                             </div>
 
-                            {/* Content */}
-                            <div className="relative z-10 pt-8">
-                                {/* Animated stat value */}
-                                <div className="font-display text-6xl md:text-7xl lg:text-8xl font-extralight tracking-tight mb-4 text-text-dark">
-                                    <AnimatedCounter
-                                        value={stat.value}
-                                        suffix={stat.suffix}
-                                        duration={2.5}
-                                        decimals={stat.decimals}
-                                    />
-                                </div>
-
-                                <h3 className="text-lg font-light text-text-dark mb-3">
-                                    {stat.label}
-                                </h3>
-
-                                <p className="text-sm text-text-dark-muted font-light leading-relaxed">
-                                    {stat.sublabel}
-                                </p>
+                            {/* Animated stat value */}
+                            <div className="font-display text-6xl md:text-7xl lg:text-8xl font-extralight tracking-tight mb-4 text-text-dark">
+                                <AnimatedCounter
+                                    value={stat.value}
+                                    suffix={stat.suffix}
+                                    duration={2.5}
+                                    decimals={stat.decimals}
+                                />
                             </div>
+
+                            <h3 className="text-lg font-light text-text-dark mb-3">
+                                {stat.label}
+                            </h3>
+
+                            <p className="text-sm text-text-dark-muted font-light leading-relaxed">
+                                {stat.sublabel}
+                            </p>
 
                             {/* Subtle bottom accent line */}
                             <motion.div

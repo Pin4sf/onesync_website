@@ -107,12 +107,16 @@ const config: Config = {
                 'grid-subtle': 'linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px)',
             },
 
-            // Simplified animations - subtle and premium
+            // Animations - premium and purposeful
             animation: {
                 "fade-in": "fadeIn 0.5s ease-out forwards",
                 "slide-up": "slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
                 "fade-in-slow": "fadeIn 0.8s ease-out forwards",
                 "shimmer": "shimmer 3s linear infinite",
+                "mesh-1": "mesh1 20s ease-in-out infinite",
+                "mesh-2": "mesh2 25s ease-in-out infinite",
+                "mesh-3": "mesh3 30s ease-in-out infinite",
+                "spotlight": "spotlight 2s ease infinite",
             },
 
             keyframes: {
@@ -127,6 +131,26 @@ const config: Config = {
                 shimmer: {
                     "0%": { backgroundPosition: "0% center" },
                     "100%": { backgroundPosition: "200% center" },
+                },
+                mesh1: {
+                    "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+                    "25%": { transform: "translate(30px, -50px) scale(1.1)" },
+                    "50%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                    "75%": { transform: "translate(50px, 30px) scale(1.05)" },
+                },
+                mesh2: {
+                    "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+                    "33%": { transform: "translate(-40px, 30px) scale(1.15)" },
+                    "66%": { transform: "translate(20px, -40px) scale(0.85)" },
+                },
+                mesh3: {
+                    "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+                    "50%": { transform: "translate(40px, -20px) scale(1.1)" },
+                },
+                spotlight: {
+                    "0%": { opacity: "0", transform: "scale(0.8)" },
+                    "50%": { opacity: "1" },
+                    "100%": { opacity: "0", transform: "scale(1.2)" },
                 },
             },
 

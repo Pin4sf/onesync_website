@@ -54,15 +54,21 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="scroll-smooth">
+        <html lang="en" className="scroll-smooth" style={{ colorScheme: "dark" }}>
             <body
                 className={`${outfit.variable} ${spaceGrotesk.variable} ${spaceMono.variable} font-sans antialiased bg-surface-950 text-text-secondary overflow-x-hidden`}
             >
                 <SmoothScroll>
+                    <a
+                        href="#main-content"
+                        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-emerald focus:text-white focus:rounded-lg focus:text-sm focus:font-light"
+                    >
+                        Skip to main content
+                    </a>
                     <CustomCursor />
                     <GradientMesh />
                     <Header />
-                    <main className="relative z-10 min-h-screen">{children}</main>
+                    <main id="main-content" className="relative z-10 min-h-screen">{children}</main>
                     <Footer />
                 </SmoothScroll>
                 <Analytics />
