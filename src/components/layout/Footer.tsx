@@ -80,6 +80,7 @@ function AnimatedLink({
                     className={`w-3 h-3 transition-all duration-300 ${
                         isHovered ? "opacity-100 translate-x-0 -translate-y-0" : "opacity-0 -translate-x-1 translate-y-1"
                     }`}
+                    aria-hidden="true"
                 />
             )}
         </motion.a>
@@ -178,14 +179,14 @@ export function Footer() {
                         </h4>
                         <div className="space-y-4">
                             <AnimatedLink
-                                href="mailto:01nesync@gmail.com"
+                                href="/contact"
                                 className="text-text-dark-secondary text-sm font-light"
                             >
-                                01nesync@gmail.com
+                                Contact Us
                             </AnimatedLink>
                             <div>
                                 <AnimatedLink
-                                    href="mailto:01nesync@gmail.com"
+                                    href="/contact"
                                     className="text-text-dark-secondary text-sm font-light"
                                     showArrow
                                 >

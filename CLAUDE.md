@@ -29,14 +29,19 @@ No test suite configured.
 ```
 src/
 ├── app/                    # Next.js App Router pages
-│   ├── page.tsx           # Home (composition of section components)
+│   ├── page.tsx           # Home (composition of section components + preloader)
+│   ├── contact/           # Contact page with form
+│   ├── investor/          # Investor page (Lean Canvas, Business Model)
 │   ├── product/           # Product page
 │   ├── team/              # Team page
-│   └── technology/        # Technology page
+│   ├── technology/        # Technology page
+│   ├── loading.tsx        # Global loading skeleton
+│   └── error.tsx          # Global error boundary
 ├── components/
-│   ├── layout/            # Header, Footer
+│   ├── backgrounds/       # GradientMesh, DotGrid
+│   ├── layout/            # Header (scroll-aware), Footer
 │   ├── sections/          # Full-width page sections (HeroSection, VisionSection, etc.)
-│   ├── ui/                # Shadcn/ui + custom primitives (GlowOrb, StatBlock, TeamCard)
+│   ├── ui/                # Preloader, MagneticButton, TextReveal, CardSpotlight, etc.
 │   └── placeholders/      # Placeholder/animation components
 └── lib/
     ├── utils.ts           # cn() utility (clsx + tailwind-merge)
@@ -72,7 +77,7 @@ className={cn("base-classes", conditional && "conditional-class", className)}
 - **Text**: text-primary (#FFF), text-secondary (#E5E5E5), text-muted (#737373)
 
 ### Typography
-- Fonts: Inter (sans), Space Mono (mono)
+- Fonts: Space Grotesk (display), Outfit (sans), Space Mono (mono)
 - Custom sizes: display-2xl, display-xl, display, h1-h4, body-lg, body, body-sm
 
 ### Custom Utilities (globals.css)
@@ -80,6 +85,10 @@ className={cn("base-classes", conditional && "conditional-class", className)}
 - `.glow-emerald`, `.glow-emerald-strong` - glow effects
 - `.orb-emerald`, `.orb-gold` - decorative orb elements
 - `.section-container` (1200px), `.section-wide` (1400px) - layout containers
+- `.noise-overlay` - subtle grain texture overlay
+- `.glass-dark`, `.glass-light` - glassmorphism card styles
+- `.nav-link` - sliding emerald underline on hover
+- `.card-grid` - sibling dimming via CSS `:has()`
 
 ## Adding New Sections
 
@@ -90,31 +99,48 @@ className={cn("base-classes", conditional && "conditional-class", className)}
 
 ## Documentation
 
-Asset specs and design guidelines in `docs/`:
-- `IMPLEMENTATION_PLAN.md` - **START HERE** - Complete implementation plan with phases, code examples, and prompts
-- `AGENT_CONTEXT.md` - Quick context for new agent sessions
-- `ASSET_REQUIREMENTS.md` - image/video specs
-- `PREMIUM_ANIMATIONS_GUIDE.md` - animation patterns
-- `AI_ASSET_GENERATION_GUIDE.md` - How to generate assets with AI tools
+```
+docs/
+├── ASSET_REQUIREMENTS.md          # Image/video asset specs
+├── AI_ASSET_GENERATION_GUIDE.md   # How to generate assets with AI tools
+├── PREMIUM_ANIMATIONS_GUIDE.md    # Animation patterns reference
+├── PRODUCT_PROMPTS.md             # AI prompts for consistent product generation
+├── Research Docs/                 # Technical research PDFs
+├── plans/                         # Design update & product brainstorm plans
+├── audits/                        # Design audit reports
+└── _archive/                      # Superseded docs (old implementation plan, etc.)
+```
 
 ## Current Implementation Status
 
-**Target**: Apple/Samsung product page quality with scroll animations
-
 ### Completed
-- [x] Basic section structure (9 sections)
-- [x] Dark theme design system
-- [x] Framer Motion integration
-- [x] Responsive layout
+- [x] 9 section homepage (Hero, Problem, CostOfStress, Vision, Product, AppShowcase, Market, Team, CTA)
+- [x] Dark theme design system with light sections
+- [x] Premium typography (Space Grotesk / Outfit / Space Mono)
+- [x] Continuous gradient mesh background with animated emerald orbs
+- [x] Preloader with stacked word reveal + percentage counter (session-aware)
+- [x] Scroll-aware sticky header (hides on scroll down, reveals on scroll up)
+- [x] MagneticButton on CTAs (Header, CTA section, Contact form)
+- [x] TextReveal (word-by-word opacity on scroll) on VisionSection
+- [x] AnimatedCounter statistics on MarketSection
+- [x] App screenshots with 3D perspective parallax (AppShowcaseSection)
+- [x] SVG circular text decoration on MarketSection
+- [x] Contact page with validated form
+- [x] Investor page (Lean Canvas, Business Model Canvas)
+- [x] Loading skeletons + error boundaries for all routes
+- [x] Breadcrumbs on sub-pages
+- [x] Accessibility: skip-to-content, aria attributes, prefers-reduced-motion
+- [x] Nav-link underlines, card-grid dimming, noise overlay, glass utilities
+- [x] Vercel Analytics
 
-### In Progress / Needed
-- [ ] Premium typography (replace Inter with Space Grotesk/Outfit)
-- [ ] Continuous gradient mesh background
-- [ ] GSAP ScrollTrigger sticky scroll sections
+### Still Needed
+- [ ] Professional email domain (business decision, not code)
 - [ ] Hero video background + floating product
-- [ ] 360° product scroll canvas
-- [ ] Animated counter statistics
-- [ ] Real product/app assets (generate via AI tools)
+- [ ] 360° product scroll canvas/video
+- [ ] Interactive System Demo page (/demo) — conditional inference showcase
+- [ ] Real product evidence / pilot data
+- [ ] For Teams landing page (/teams)
+- [ ] Lighthouse performance audit & optimization
 
 ## Asset Generation
 
@@ -137,14 +163,13 @@ Asset specs and design guidelines in `docs/`:
 | Icons | Recraft AI | Free tier |
 
 **Prompts**: See `docs/PRODUCT_PROMPTS.md` for all refined AI prompts.
-**Full Plan**: See `docs/IMPLEMENTATION_PLAN.md` for detailed workflow.
 
-## Priority Order
+## Priority Order (Remaining)
 
-1. Typography upgrade (fonts)
-2. Gradient mesh background
-3. GSAP ScrollTrigger setup
-4. Generate assets with AI tools
-5. Hero section upgrade
-6. Product 360° canvas
-7. Polish and deploy
+1. Professional email + compliance badge audit (business)
+2. Interactive System Demo page (/demo)
+3. Hero video + floating product asset generation
+4. 360° product scroll canvas/video
+5. For Teams landing page (/teams)
+6. Lighthouse audit & performance optimization
+7. Deploy to production

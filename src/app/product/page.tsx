@@ -9,6 +9,7 @@ import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { AppPreview } from "@/components/ui/AppPreview";
 import { fadeInUp, staggerReveal, staggerRevealItem, scrollReveal } from "@/lib/motion";
 import { Battery, Droplets, Activity, Brain, Heart, Zap, Shield, Smartphone, ArrowRight } from "lucide-react";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 const features = [
     {
@@ -117,6 +118,7 @@ export default function ProductPage() {
                 </div>
 
                 <div className="section-container relative z-10">
+                    <Breadcrumbs variant="dark" segments={[{ label: "Home", href: "/" }, { label: "Product" }]} />
                     <div className="flex items-center justify-center min-h-[70vh]">
                         <motion.div {...fadeInUp} className="text-center max-w-3xl">
                             <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">

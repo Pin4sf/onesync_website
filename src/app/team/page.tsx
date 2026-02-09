@@ -7,6 +7,7 @@ import { BackgroundText } from "@/components/ui/BackgroundText";
 import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
 import { Linkedin, Mail, ArrowRight } from "lucide-react";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 const teamMembers = [
     {
@@ -68,6 +69,7 @@ export default function TeamPage() {
             {/* Hero Section - Dark */}
             <section className="min-h-[60vh] pt-24 pb-20 bg-surface-950 relative overflow-hidden flex items-center">
                 <div className="section-container relative z-10">
+                    <Breadcrumbs variant="dark" segments={[{ label: "Home", href: "/" }, { label: "Team" }]} />
                     <motion.div {...scrollReveal} className="max-w-3xl">
                         <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">
                             The Founding <span className="text-emerald-gradient">Team</span>

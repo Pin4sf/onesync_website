@@ -73,7 +73,7 @@ export function ProductSection() {
                             {features.map((feature, index) => (
                                 <span key={feature.title} className="flex items-center gap-6">
                                     <span className="flex items-center gap-2 text-text-dark-muted">
-                                        <feature.Icon className="w-4 h-4 text-emerald" />
+                                        <feature.Icon className="w-4 h-4 text-emerald" aria-hidden="true" />
                                         <span className="text-sm font-light">{feature.title}</span>
                                     </span>
                                     {index < features.length - 1 && (

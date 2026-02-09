@@ -6,6 +6,7 @@ import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { BackgroundText } from "@/components/ui/BackgroundText";
 import { DotGrid } from "@/components/backgrounds/DotGrid";
+import { TextReveal } from "@/components/ui/TextReveal";
 
 const values = [
     "Minimal by design",
@@ -76,6 +77,15 @@ export function VisionSection() {
                         >
                             &rdquo;
                         </motion.span>
+                    </div>
+
+                    {/* Vision statement with scroll-reveal text */}
+                    <div className="mt-12 mb-8">
+                        <TextReveal
+                            text="We believe the next frontier of health isn't just physical — it's cognitive. OneSync exists to make the invisible visible."
+                            className="font-display text-2xl md:text-3xl font-extralight text-text-dark-secondary leading-relaxed justify-center"
+                            as="p"
+                        />
                     </div>
 
                     {/* Values */}

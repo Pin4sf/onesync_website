@@ -103,7 +103,7 @@ export function TeamSection() {
 
                                     {/* LinkedIn indicator */}
                                     <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
-                                        <Linkedin className="w-3 h-3 text-emerald" />
+                                        <Linkedin className="w-3 h-3 text-emerald" aria-hidden="true" />
                                     </div>
                                 </div>
 
@@ -130,7 +130,7 @@ export function TeamSection() {
                     viewport={{ once: true }}
                     className="mt-12 text-center text-xs text-text-dark-muted font-light flex items-center justify-center gap-2"
                 >
-                    <Linkedin className="w-3 h-3" />
+                    <Linkedin className="w-3 h-3" aria-hidden="true" />
                     Connect on LinkedIn
                 </motion.p>
             </div>
