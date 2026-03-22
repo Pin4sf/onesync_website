@@ -288,12 +288,12 @@ export default function ProductPage() {
                                 Where This <span className="text-emerald-gradient">Goes</span>
                             </h2>
                             <p className="text-body-lg text-text-dark-secondary font-light mb-10 leading-relaxed">
-                                Today, OneSync knows your body. Tomorrow, it knows your calendar, your email, your Slack. Eventually, it becomes the operating system for your entire life — starting from the only signal that can&apos;t be faked.
+                                Today, OneSync knows your body. Tomorrow, it understands your rhythms, your triggers, your recovery patterns. Eventually, it becomes the intelligence layer for your entire life — starting from the only signal that can&apos;t be faked.
                             </p>
                             <div className="space-y-6">
                                 {[
                                     { icon: Smartphone, text: "Now: Your body — readiness, stress, recovery" },
-                                    { icon: Zap, text: "Next: Your world — calendar, email, tasks" },
+                                    { icon: Zap, text: "Next: Your context — work, relationships, life" },
                                     { icon: Shield, text: "Then: Your OS — an agent that handles anything" },
                                 ].map((item) => (
                                     <div key={item.text} className="flex items-center gap-4 group">

@@ -6,90 +6,93 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { BackgroundText } from "@/components/ui/BackgroundText";
 import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
-import { Cpu, Wifi, Shield, Zap, Server, Code, Layers, FileJson, Activity, Lock, ArrowRight } from "lucide-react";
+import { Cpu, Wifi, Shield, Zap, Server, Code, Layers, FileJson, Activity, Lock, ArrowRight, Brain, Sparkles, Eye } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
-const techStack = [
+const capabilities = [
     {
-        category: "The Brain on Your Phone",
+        category: "On-Device Intelligence",
         icon: Cpu,
         items: [
             {
-                name: "Your Readiness Engine",
-                description: "A score that tells you how sharp you are — computed entirely on your phone from sleep, heart rate variability, circadian rhythm, and movement. No internet needed. No data leaves your device.",
-                icon: Layers,
+                name: "Cognitive Readiness Engine",
+                description: "A proprietary scoring system that turns raw biometric signals into a single, actionable number — your readiness to perform. Runs entirely on your phone. Zero latency. Zero cloud dependency.",
+                icon: Brain,
             },
             {
-                name: "Speaks to Every Watch",
-                description: "Native Swift and Kotlin modules that talk directly to Apple HealthKit and Android Health Connect. Your watch already collects the data — we just make it useful.",
+                name: "Universal Wearable Compatibility",
+                description: "Seamlessly connects with Apple Watch, Pixel Watch, Samsung Galaxy Watch, and every major wearable platform. One agent, every ecosystem.",
                 icon: Activity,
             },
             {
-                name: "The Smart Skip",
-                description: "Most of the time, your body is fine and the AI doesn't need to run. A simple rules engine catches 60-80% of checks — meaning zero AI cost for the majority of your day.",
-                icon: FileJson,
+                name: "Adaptive Cost Intelligence",
+                description: "A built-in optimization layer that ensures the AI only activates when it matters — keeping costs near zero while maintaining instant response for critical moments.",
+                icon: Zap,
             },
         ],
     },
     {
-        category: "The Agent That Speaks",
-        icon: Wifi,
+        category: "Proactive Agent System",
+        icon: Sparkles,
         items: [
             {
-                name: "Powered by Claude",
-                description: "When the agent does speak, it uses Anthropic's Claude — the same AI that powers tools engineers love. Personalized, empathetic, and never generic.",
+                name: "Anthropic-Powered Reasoning",
+                description: "Built on the same frontier AI that powers the tools the world's best engineers trust. Every message is personalized, empathetic, and contextually aware — never a generic notification.",
                 icon: Server,
             },
             {
-                name: "13 Systems in One",
-                description: "We didn't invent from scratch. We studied the best — from enterprise agent platforms to open-source frameworks — and distilled the best patterns into a single architecture.",
+                name: "Architecture Distilled from 13 Systems",
+                description: "We didn't start from scratch. We studied the best production agent platforms in the world and distilled their most powerful patterns into a single, purpose-built system.",
                 icon: Code,
             },
             {
-                name: "Serverless Backbone",
-                description: "The backend runs on Supabase Edge Functions — serverless, scalable, and cost-effective. Checks run every 15 minutes, quietly, in the background.",
-                icon: Shield,
+                name: "Always-On Background Processing",
+                description: "Continuous, silent monitoring that checks on you every 15 minutes — without draining your battery or requiring you to open an app. It's running even when you forget about it.",
+                icon: Eye,
             },
         ],
     },
     {
-        category: "Privacy as a Feature",
+        category: "Privacy-First Architecture",
         icon: Shield,
         items: [
             {
                 name: "Military-Grade Encryption",
-                description: "Your health data is encrypted on your phone with AES-256 — the same standard used by governments. Not even we can read it.",
+                description: "Every piece of health data is encrypted with AES-256 on your device — the same standard that protects classified government systems. Not even we can read your data.",
                 icon: Lock,
             },
             {
-                name: "You Only See Yours",
-                description: "Every database query is locked to your account. Row-level security means even if someone broke into the server, they couldn't see your data.",
+                name: "Zero-Knowledge Cloud",
+                description: "When data syncs, it's locked to your account with hardware-level isolation. Even in the impossible event of a breach, your data remains invisible to everyone but you.",
                 icon: Shield,
             },
             {
-                name: "We Don't Log Your Health",
-                description: "We never log your actual heart rate, sleep hours, or stress levels. Period. We track what the agent did, not what your body said.",
+                name: "No Health Data Logging. Ever.",
+                description: "We fundamentally do not log your heart rate, sleep patterns, or stress levels. We track what the agent did — never what your body said. This isn't a policy. It's architecture.",
                 icon: FileJson,
             },
         ],
     },
 ];
 
-const specifications = [
-    { label: "Mobile App", value: "React Native + Expo", description: "One codebase, both platforms", icon: Cpu },
-    { label: "Design System", value: "NativeWind + Tailwind", description: "Beautiful, consistent UI", icon: Zap },
-    { label: "Health Data", value: "Encrypted SQLite", description: "AES-256 on your phone", icon: Shield },
-    { label: "Cloud", value: "Supabase", description: "Postgres + Edge Functions + Auth", icon: Server },
-    { label: "Intelligence", value: "Claude by Anthropic", description: "Empathetic, personalized AI", icon: Activity },
-    { label: "Delivery", value: "Telegram Bot", description: "Messages that reach you first", icon: Wifi },
+const principles = [
+    {
+        icon: Zap,
+        title: "Why does the score compute on your phone?",
+        description: "Because the most intimate data you have should never leave your device unless you choose. Your readiness score works without internet, responds in milliseconds, and is grounded in SAFTE-FAST — the same fatigue science the US Army trusts for mission-critical decisions.",
+    },
+    {
+        icon: Code,
+        title: "Why does the agent come to you on Telegram?",
+        description: "Because 88% of people stop opening health apps within 30 days. Beautiful dashboards mean nothing if nobody looks at them. A message that arrives at 7am and tells you the truth about your body — that's a fundamentally different product. The delivery is the product.",
+    },
 ];
 
 export default function TechnologyPage() {
     return (
         <div className="min-h-screen">
-            {/* Hero Section - Dark with background image */}
+            {/* Hero Section - Dark */}
             <section className="min-h-[70vh] pt-24 pb-20 bg-surface-950 relative overflow-hidden flex items-center">
-                {/* Background image from home page */}
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/product/oneband-prototype.png"
@@ -98,7 +101,6 @@ export default function TechnologyPage() {
                         className="object-cover object-center opacity-40"
                         priority
                     />
-                    {/* Gradient overlays */}
                     <div className="absolute inset-0 bg-gradient-to-r from-surface-950 via-surface-950/60 to-surface-950/40" />
                     <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-transparent to-surface-950/50" />
                 </div>
@@ -107,23 +109,23 @@ export default function TechnologyPage() {
                     <Breadcrumbs variant="dark" segments={[{ label: "Home", href: "/" }, { label: "Technology" }]} />
                     <motion.div {...scrollReveal}>
                         <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">
-                            How We <span className="text-emerald-gradient">Built It</span>
+                            The Science <span className="text-emerald-gradient">Under the Hood</span>
                         </h1>
                         <p className="text-body-lg md:text-xl text-text-secondary font-extralight max-w-2xl leading-relaxed">
-                            We studied 13 production agent systems — from enterprise platforms to open-source frameworks — and took the best ideas from each. Then we built something that works offline, respects your privacy, and costs almost nothing to run.
+                            A proprietary intelligence engine that reads your biology in real-time, reasons about your state with frontier AI, and reaches you proactively — all while keeping your most intimate data under military-grade encryption on your own device.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Tech Stack Section - Light */}
+            {/* Capabilities Section */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
                 <DotGrid opacity={10} gap={28} />
-                <BackgroundText text="TECHNOLOGY" position="top" direction="right" speed={0.4} />
+                <BackgroundText text="INTELLIGENCE" position="top" direction="right" speed={0.4} />
 
                 <div className="section-container relative z-10">
                     <div className="space-y-24">
-                        {techStack.map((category, categoryIndex) => (
+                        {capabilities.map((category, categoryIndex) => (
                             <motion.div
                                 key={category.category}
                                 initial={{ opacity: 0, y: 30 }}
@@ -131,7 +133,6 @@ export default function TechnologyPage() {
                                 transition={{ delay: categoryIndex * 0.1 }}
                                 viewport={{ once: true }}
                             >
-                                {/* Category Header */}
                                 <div className="flex items-center gap-4 mb-12">
                                     <div className="w-12 h-12 rounded-full bg-emerald/10 flex items-center justify-center">
                                         <category.icon className="w-6 h-6 text-emerald" />
@@ -148,7 +149,6 @@ export default function TechnologyPage() {
                                     />
                                 </div>
 
-                                {/* Category Items */}
                                 <motion.div
                                     variants={staggerReveal}
                                     initial="hidden"
@@ -180,114 +180,44 @@ export default function TechnologyPage() {
                 </div>
             </section>
 
-            {/* Specifications Section - Card Grid */}
-            <section className="py-section-lg relative overflow-hidden bg-light-bg">
-                <DotGrid opacity={10} gap={28} />
-                <BackgroundText text="SPECS" position="center" direction="left" speed={0.3} />
-
-                <div className="section-container relative z-10">
-                    <motion.div {...scrollReveal} className="text-center mb-16">
-                        <SectionLabel>The Stack</SectionLabel>
-                        <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
-                            What Powers <span className="text-emerald-gradient">OneSync</span>
-                        </h2>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
-                    >
-                        {specifications.map((spec, index) => (
-                            <motion.div
-                                key={spec.label}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.05 }}
-                                viewport={{ once: true }}
-                                className="group relative overflow-hidden rounded-[20px] bg-white/60 backdrop-blur-[40px] backdrop-saturate-[180%] border border-black/[0.04] shadow-[0_2px_20px_rgba(0,0,0,0.04)] p-6 transition-all duration-300 ease-out hover:bg-white/80 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
-                            >
-                                {/* Light mode top highlight */}
-                                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
-                                {/* Hover glow */}
-                                <div className="absolute inset-0 rounded-[20px] bg-emerald/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                                <div className="relative z-10">
-                                    {/* Icon */}
-                                    <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center mb-4 group-hover:bg-emerald/10 transition-colors">
-                                        <spec.icon className="w-5 h-5 text-emerald" />
-                                    </div>
-                                    <p className="text-xs text-emerald font-medium uppercase tracking-wider mb-2">
-                                        {spec.label}
-                                    </p>
-                                    <p className="text-xl text-slate-900 font-light mb-2 group-hover:text-emerald transition-colors">
-                                        {spec.value}
-                                    </p>
-                                    <p className="text-sm text-slate-600 font-light">
-                                        {spec.description}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* Philosophy Section - Light */}
+            {/* Design Principles */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
                 <div className="section-container relative z-10">
                     <motion.div {...scrollReveal} className="text-center mb-20">
-                        <SectionLabel>Design Decisions</SectionLabel>
+                        <SectionLabel>Design Philosophy</SectionLabel>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
-                            Why These <span className="text-emerald-gradient">Choices</span>
+                            Every Decision Has a <span className="text-emerald-gradient">Reason</span>
                         </h2>
                     </motion.div>
 
                     <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="group"
-                        >
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="w-10 h-10 rounded-full bg-emerald/10 flex items-center justify-center group-hover:bg-emerald/20 transition-colors">
-                                    <Zap className="w-5 h-5 text-emerald" />
+                        {principles.map((principle, index) => (
+                            <motion.div
+                                key={principle.title}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                className="group"
+                            >
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-10 h-10 rounded-full bg-emerald/10 flex items-center justify-center group-hover:bg-emerald/20 transition-colors">
+                                        <principle.icon className="w-5 h-5 text-emerald" />
+                                    </div>
+                                    <h3 className="text-xl font-light text-text-dark">
+                                        {principle.title}
+                                    </h3>
                                 </div>
-                                <h3 className="text-xl font-light text-text-dark">
-                                    Why compute on your phone?
-                                </h3>
-                            </div>
-                            <p className="text-text-dark-secondary font-light leading-relaxed">
-                                Because your readiness score should work without WiFi, respond instantly, and never send raw health data anywhere. The science behind it is grounded in SAFTE-FAST — the same model the US Army uses for fatigue risk management. We adapted it for everyday life.
-                            </p>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            viewport={{ once: true }}
-                            className="group"
-                        >
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="w-10 h-10 rounded-full bg-emerald/10 flex items-center justify-center group-hover:bg-emerald/20 transition-colors">
-                                    <Code className="w-5 h-5 text-emerald" />
-                                </div>
-                                <h3 className="text-xl font-light text-text-dark">
-                                    Why Telegram, not an app?
-                                </h3>
-                            </div>
-                            <p className="text-text-dark-secondary font-light leading-relaxed">
-                                Because 88% of health app users stop opening the app within 30 days. Dashboards are beautiful and completely useless if nobody looks at them. A Telegram message that arrives at 7am is fundamentally different from a score waiting in an app. The delivery IS the product.
-                            </p>
-                        </motion.div>
+                                <p className="text-text-dark-secondary font-light leading-relaxed">
+                                    {principle.description}
+                                </p>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* CTA Section - Light */}
+            {/* CTA */}
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
                 <BackgroundText text="EXPLORE" position="center" direction="right" speed={0.3} />
 
@@ -297,7 +227,7 @@ export default function TechnologyPage() {
                             See What It <span className="text-emerald-gradient">Does</span>
                         </h2>
                         <p className="text-body-lg text-text-dark-secondary font-light mb-10 max-w-xl mx-auto">
-                            The technology is interesting. What it enables is extraordinary.
+                            The science is fascinating. What it enables is life-changing.
                         </p>
                         <motion.a
                             href="/product"

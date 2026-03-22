@@ -59,7 +59,7 @@ export function TeamSection() {
                     </h2>
 
                     <p className="text-body-lg text-text-dark-secondary font-light max-w-2xl mx-auto">
-                        We&apos;re engineers, athletes, and builders who believe the next great AI needs to start with the body, not the calendar.
+                        We&apos;re engineers, athletes, and builders who believe the next great AI needs to understand the human behind the screen.
                     </p>
                 </motion.div>
 

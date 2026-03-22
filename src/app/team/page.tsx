@@ -75,7 +75,7 @@ export default function TeamPage() {
                             The People <span className="text-emerald-gradient">Building This</span>
                         </h1>
                         <p className="text-body-lg text-text-secondary font-extralight leading-relaxed">
-                            Engineers, athletes, and builders who believe the next great personal AI starts with the body — not the calendar.
+                            Engineers, athletes, and builders who believe the next great personal AI starts with understanding the human — not just the to-do list.
                         </p>
                     </motion.div>
                 </div>

@@ -202,7 +202,7 @@ function DashboardScreen({ onCardTap }: { onCardTap?: (card: string) => void }) 
           <ChevronRight className="w-3 h-3 text-emerald-400 ml-auto" />
         </div>
         <p className="text-gray-300 text-xs leading-relaxed">
-          Your focus peaks at <span className="text-emerald-400 font-medium">10am</span>. Schedule important tasks then.
+          Your focus peaks at <span className="text-emerald-400 font-medium">10am</span>. That&apos;s your sharpest window today.
         </p>
       </motion.div>
     </motion.div>
@@ -219,7 +219,7 @@ function InsightsScreen() {
     {
       icon: Target,
       title: "Optimal Focus Window",
-      description: "Your cognitive performance peaks between 9-11am. Consider scheduling demanding tasks during this window.",
+      description: "Your cognitive performance peaks between 9-11am. This is when you make your best decisions.",
       type: "tip",
     },
     {
@@ -231,7 +231,7 @@ function InsightsScreen() {
     {
       icon: Zap,
       title: "Recovery Recommendation",
-      description: "Based on your HRV, a 20-min afternoon break would boost your evening productivity by ~18%.",
+      description: "Based on your HRV, a 20-min afternoon break would boost your evening energy by ~18%.",
       type: "action",
     },
   ];
