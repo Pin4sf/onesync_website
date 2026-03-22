@@ -46,20 +46,20 @@ const teamMembers = [
 
 const values = [
     {
-        title: "Privacy First",
-        description: "We believe your biometric data belongs to you. Our architecture ensures your most sensitive information never leaves your control.",
+        title: "Your Data, Your Control",
+        description: "Health data is the most intimate data you have. We encrypt it on your phone and never log it on our servers. That's not a feature — it's a promise.",
     },
     {
-        title: "Scientific Rigor",
-        description: "Every insight we deliver is grounded in peer-reviewed research and validated through rigorous testing protocols.",
+        title: "Science, Not Hype",
+        description: "Our readiness score is grounded in SAFTE-FAST, the same fatigue model the US Army trusts. When we don't have enough data, we say so.",
     },
     {
-        title: "Transparent AI",
-        description: "We show our confidence levels and explain our reasoning. When we don't know, we say so explicitly.",
+        title: "Honest AI",
+        description: "The agent shows its confidence level. It explains its reasoning. It never pretends to be a doctor. And it never diagnoses medical conditions.",
     },
     {
-        title: "Human-Centered",
-        description: "Technology should enhance human capability, not replace it. We design for empowerment, not dependency.",
+        title: "Built to Empower",
+        description: "OneSync doesn't replace your judgment — it gives you information your conscious mind doesn't have access to, so you can make better decisions.",
     },
 ];
 
@@ -72,11 +72,10 @@ export default function TeamPage() {
                     <Breadcrumbs variant="dark" segments={[{ label: "Home", href: "/" }, { label: "Team" }]} />
                     <motion.div {...scrollReveal} className="max-w-3xl">
                         <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">
-                            The Founding <span className="text-emerald-gradient">Team</span>
+                            The People <span className="text-emerald-gradient">Building This</span>
                         </h1>
                         <p className="text-body-lg text-text-secondary font-extralight leading-relaxed">
-                            We're a team of engineers, scientists, and designers united by a
-                            mission to make cognitive wellness measurable and actionable.
+                            Engineers, athletes, and builders who believe the next great personal AI starts with the body — not the calendar.
                         </p>
                     </motion.div>
                 </div>
@@ -167,9 +166,9 @@ export default function TeamPage() {
 
                 <div className="section-container relative z-10">
                     <motion.div {...scrollReveal} className="text-center mb-16">
-                        <SectionLabel>Our Values</SectionLabel>
+                        <SectionLabel>What We Believe</SectionLabel>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
-                            What We <span className="text-emerald-gradient">Stand For</span>
+                            Principles, Not <span className="text-emerald-gradient">Platitudes</span>
                         </h2>
                     </motion.div>
 
@@ -205,11 +204,10 @@ export default function TeamPage() {
                 <div className="section-container text-center relative z-10">
                     <motion.div {...scrollReveal}>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light mb-6">
-                            Join Our <span className="text-emerald-gradient">Mission</span>
+                            Build With <span className="text-emerald-gradient">Us</span>
                         </h2>
                         <p className="text-body-lg text-text-dark-secondary font-light mb-10 max-w-xl mx-auto">
-                            We're always looking for talented individuals who share our
-                            passion for revolutionizing personal health technology.
+                            If you believe the next great personal AI starts with the body — we&apos;d love to hear from you.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
                             <motion.a

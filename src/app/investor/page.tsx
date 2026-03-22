@@ -30,124 +30,124 @@ const leanCanvas = {
         title: "Problem",
         icon: Target,
         items: [
-            "Performance failure is unmeasured or inferred in high-stakes roles",
-            "Consumer wearables lack cognitive intelligence",
-            "Institutions rely on subjective assessments"
+            "Every AI agent is blind to your body — they optimize output without knowing your input",
+            "Health apps have 3-12% 30-day retention because dashboards are passive",
+            "62% of knowledge workers report burnout (HBR 2026)"
         ],
         backTitle: "Existing Alternatives",
         backContent: [
-            "Fitness wearables (HR, sleep, steps only)",
-            "Questionnaires & coach judgment",
-            "Lab-only performance testing",
-            "Fragmented analytics tools"
+            "WHOOP Coach: proactive but in-app only, $30/mo, single-device",
+            "Oura Advisor: reactive, ring-only, no external messaging",
+            "Nori (YC): iOS only, data syncing issues, no real-time alerts",
+            "Lindy/Manus: zero biological awareness"
         ]
     },
     solution: {
         title: "Solution",
         icon: Lightbulb,
         items: [
-            "OneBand wearable + edge-AI cognitive inference",
-            "Fatigue, focus, and readiness in real time",
-            "Privacy-first, institution-grade deployment"
+            "AI agent that reads your wearable and acts proactively via Telegram",
+            "Cognitive Readiness Score (0-100) from sleep, HRV, circadian rhythm, activity",
+            "Learns your patterns over weeks — stress triggers, recovery strategies"
         ],
         backTitle: "How It Works",
         backContent: [
-            "Multi-modal physiological sensing",
-            "On-device AI processing (no cloud dependency)",
-            "Real-time alerts & actionable insights",
-            "Seamless institutional integration"
+            "Wearable → HealthKit/Health Connect → CRS on-phone",
+            "Rules pre-filter (60-80% skip Claude = $0 cost)",
+            "Claude Haiku 4.5 with 8 tools, 3 iterations max",
+            "Proactive morning brief + stress alerts on Telegram"
         ]
     },
     keyMetrics: {
         title: "Key Metrics",
         icon: BarChart3,
         items: [
-            "Signal reliability",
-            "Pilot-to-contract conversion",
-            "Institutional engagement depth",
-            "Deployment success rate"
+            "Day 30 retention (target: >30% vs industry 3-12%)",
+            "Morning brief open rate",
+            "Feedback loop engagement (thumbs up/down)",
+            "CRS accuracy vs subjective ratings"
         ],
         backTitle: "Success Indicators",
         backContent: [
-            ">95% signal accuracy in field conditions",
-            ">60% pilot-to-contract conversion rate",
-            "Net Promoter Score tracking",
-            "Time-to-value for institutions"
+            "5-7 daily active beta users for 14+ days",
+            "Proactive messaging drives >3x engagement vs passive",
+            "Pattern discovery after 2+ weeks of data",
+            "Break-even at ~50 Pro subscribers"
         ]
     },
     uniqueValue: {
         title: "Unique Value Proposition",
         icon: Zap,
-        highlight: "Actionable performance intelligence where failure has real cost."
+        highlight: "The biological intelligence layer for the agentic economy. No agent knows your body — OneSync changes that."
     },
     unfairAdvantage: {
         title: "Unfair Advantage",
         icon: Shield,
         items: [
-            "Proprietary sensing + edge-AI stack",
-            "Athlete-validated, founder-embedded insight",
-            "Explainable, privacy-first architecture",
-            "Early institutional pilot access"
+            "Biology is the only un-replicable data layer",
+            "Data flywheel compounds over months — switching cost is total",
+            "Device-agnostic + external messaging + cross-platform = empty quadrant",
+            "Architecture distilled from 13 production agent systems"
         ],
-        backTitle: "Defensibility",
+        backTitle: "The Moat",
         backContent: [
-            "System-level IP across hardware + software",
-            "2+ years head start in cognitive inference",
-            "Deep domain expertise in elite performance",
-            "Strategic pilot relationships"
+            "Day 1: Population defaults. Week 2: Personal baselines.",
+            "Month 1: Feedback loop active. Month 3: Deep patterns.",
+            "Month 6: Predictive. Year 1: Agent knows you better than you.",
+            "Every thumbs-up = labeled training data no competitor has"
         ]
     },
     channels: {
         title: "Channels",
         icon: TrendingUp,
         items: [
-            "Direct institutional sales",
-            "Paid pilots → contracts",
-            "Academic & strategic networks"
+            "Telegram community (wearable + productivity enthusiasts)",
+            "Product Hunt / Hacker News launch",
+            "Twitter/X developer & health tech communities"
         ]
     },
     customerSegments: {
         title: "Customer Segments",
         icon: Users,
         items: [
-            "Elite sports teams",
-            "Defense & training institutions",
-            "High-performance enterprises",
-            "Research & performance labs"
+            "Startup founders (14-hour days, no boundaries)",
+            "Software engineers (deep work, meeting fatigue)",
+            "Product managers (context-switching burnout)",
+            "Students & remote workers (always-on culture)"
         ],
-        backTitle: "Target Profiles",
+        backTitle: "Target Profile",
         backContent: [
-            "Teams with $10M+ performance budgets",
-            "Organizations where failure has high cost",
-            "Early adopters in performance tech",
-            "Research partners seeking validation data"
+            "Wears a smartwatch but gets zero actionable value",
+            "Uses productivity tools blind to their body",
+            "Knowledge worker experiencing burnout",
+            "Early adopter comfortable with Telegram"
         ]
     },
     costStructure: {
         title: "Cost Structure",
         icon: DollarSign,
         items: [
-            "R&D (hardware + AI)",
-            "Core engineering",
-            "Manufacturing & controlled pilots",
-            "Institutional sales"
+            "MVP build cost: ~$466 USD (extremely capital-efficient)",
+            "Claude Haiku: ~$0.90/user/mo at Pro tier",
+            "Supabase free tier + keep-alive",
+            "Engineering (solo founder + Claude Code)"
         ]
     },
     revenueStreams: {
         title: "Revenue Streams",
         icon: TrendingUp,
         items: [
-            "Annual institutional contracts",
-            "Paid pilots",
-            "Device + mandatory SaaS",
-            "Advanced analytics & integrations"
+            "Free tier: acquisition (1 brief/day, basic CRS)",
+            "Pro: Rs 399/mo ($4.34) — full agent, patterns, unlimited alerts",
+            "Team: Rs 999/mo/seat — team cognitive dashboards",
+            "Future: Body API (MCP/A2A) for other agents"
         ],
-        backTitle: "Pricing Model",
+        backTitle: "Unit Economics",
         backContent: [
-            "$500-1000/device + SaaS subscription",
-            "Pilot programs: $25K-75K",
-            "Enterprise contracts: $100K-500K/year",
-            "Premium integrations: Custom pricing"
+            "Pro: $4.34 revenue, $0.90 AI cost = 79% margin",
+            "Team: $10.87 revenue, $0.90 AI cost = 92% margin",
+            "Break-even: ~50 Pro subscribers",
+            "Comfortable profitability at 200 subscribers"
         ]
     }
 };
@@ -158,164 +158,172 @@ const businessModelCanvas = {
         title: "Key Partners",
         icon: Handshake,
         items: [
-            "Elite sports teams & performance staff",
-            "Academic & performance research labs",
-            "Hardware manufacturing & sensor vendors",
-            "Institutional pilots via incubators & strategic networks"
+            "Anthropic (Claude Haiku 4.5 — core AI engine)",
+            "Supabase (backend infrastructure)",
+            "Telegram (primary delivery channel)",
+            "Wearable OEMs (Health Connect / HealthKit ecosystem)"
         ],
         backTitle: "Partnership Strategy",
         backContent: [
-            "Co-development agreements with research labs",
-            "Strategic distribution partnerships",
-            "Manufacturing partnerships for scale",
-            "Integration partnerships with existing systems"
+            "Academic validation partners for CRS algorithm",
+            "Telegram bot community for distribution",
+            "Integration with MCP/A2A for agent interop",
+            "Potential WHOOP/Oura API partnerships (Phase 3)"
         ]
     },
     keyActivities: {
         title: "Key Activities",
         icon: Zap,
         items: [
-            "Multi-modal sensing & signal validation",
-            "Edge-AI cognitive inference development",
-            "Controlled pilots & institutional deployment",
-            "Privacy, compliance, and system hardening"
+            "CRS algorithm development & validation",
+            "Agent personality tuning & quality gates",
+            "Cross-platform health data pipeline",
+            "User feedback loop → agent learning"
         ],
         backTitle: "Core Focus Areas",
         backContent: [
-            "Continuous algorithm improvement",
-            "Hardware iteration & miniaturization",
-            "Regulatory pathway navigation",
-            "Customer success & retention"
+            "Proactive messaging that drives retention",
+            "Pattern discovery from longitudinal data",
+            "Privacy-first health data architecture",
+            "Capital-efficient single-founder execution"
         ]
     },
     keyResources: {
         title: "Key Resources",
         icon: Building,
         items: [
-            "OneBand hardware + proprietary sensing stack",
-            "Edge-AI models & analytics platform",
-            "Founder domain expertise (elite sport)",
-            "Institutional relationships & pilot access"
+            "Agent OS architecture from 13 production systems",
+            "SAFTE-FAST validated CRS science",
+            "Claude Code as force multiplier",
+            "Biological data flywheel (un-replicable)"
         ],
         backTitle: "Competitive Assets",
         backContent: [
-            "Patent-pending sensing technology",
-            "Proprietary training data sets",
-            "Domain expertise moat",
-            "Early mover advantage in pilots"
+            "Labeled training data: subjective + biometric, at scale",
+            "Personal baselines that deepen over months",
+            "Architecture validated against real agent codebases",
+            "50-150x more capital-efficient than avg health tech MVP"
         ]
     },
     valueProposition: {
         title: "Unique Value Proposition",
         icon: Target,
-        highlight: "Actionable cognitive-performance intelligence where failure has real operational and financial cost."
+        highlight: "The biological intelligence layer for the agentic economy. Every AI agent will need to know your body — OneSync is that layer."
     },
     customerRelationship: {
         title: "Customer Relationship",
         icon: Users,
         items: [
-            "High-touch institutional onboarding",
-            "Pilot-led validation → long-term contracts",
-            "Ongoing analytics, support, and upgrades"
+            "AI onboarding interview (3-5 min, Day 0)",
+            "Progressive trust: advise → suggest → act autonomously",
+            "Agent learns from every interaction — gets smarter over weeks"
         ]
     },
     channels: {
         title: "Channels",
         icon: TrendingUp,
         items: [
-            "Direct institutional sales",
-            "Paid pilots → enterprise contracts",
-            "Academic, incubator, and strategic networks"
+            "Telegram community + word of mouth",
+            "Product Hunt / Hacker News launch",
+            "Health tech + AI agent Twitter/X communities"
         ]
     },
     customerSegments: {
         title: "Customer Segments",
         icon: Users,
         items: [
-            "Elite & professional sports teams",
-            "Defense & training institutions",
-            "High-performance enterprises",
-            "Research & performance labs"
+            "Burned-out startup founders",
+            "Software engineers (deep work protection)",
+            "Product managers (decision fatigue)",
+            "Students & remote workers"
         ],
         backTitle: "Ideal Customer Profile",
         backContent: [
-            "Annual performance budget >$1M",
-            "Existing investment in wearables/analytics",
-            "Clear performance KPIs tracked",
-            "Innovation-forward leadership"
+            "Wears a smartwatch, gets zero actionable value",
+            "Uses AI tools that have zero body awareness",
+            "Knowledge worker experiencing burnout",
+            "Comfortable with Telegram, early adopter mindset"
         ]
     },
     costStructure: {
         title: "Cost Structure",
         icon: DollarSign,
         items: [
-            "R&D (hardware + AI models)",
-            "Core engineering & validation",
-            "Manufacturing & controlled pilots",
-            "Institutional sales & partnerships"
+            "AI inference: Claude Haiku $0.90/user/mo",
+            "Infrastructure: Supabase free tier",
+            "Total MVP build: ~$466 USD",
+            "Solo founder execution with Claude Code"
         ]
     },
     revenueStreams: {
         title: "Revenue Streams",
         icon: DollarSign,
         items: [
-            "Annual institutional contracts",
-            "Paid pilot programs",
-            "Device + mandatory SaaS subscription",
-            "Advanced analytics & custom integrations"
+            "Free: Acquisition tier",
+            "Pro: Rs 399/mo ($4.34) — 79% margin",
+            "Team: Rs 999/mo/seat — 92% margin",
+            "Future: Body API for other agents"
         ],
-        backTitle: "Revenue Breakdown",
+        backTitle: "Revenue Model",
         backContent: [
-            "70% recurring SaaS revenue",
-            "20% hardware sales",
-            "10% premium services & integrations",
-            "Target: 80%+ gross margin on SaaS"
+            "SaaS-only, no hardware dependency",
+            "Break-even at ~50 Pro subscribers",
+            "Profitable at 200 subscribers",
+            "Body API (MCP/A2A) = platform revenue at scale"
         ]
     }
 };
 
 // Competitive Advantage Data
 const competitiveData = {
-    parameters: ["Core Intelligence", "Architecture", "IP & Defensibility", "Explainability & Auditability"],
+    parameters: ["Body Awareness", "Proactive Messaging", "External Channel", "Multi-Device", "Cross-Platform", "Price"],
     competitors: [
         {
             name: "OneSync",
             highlight: true,
             values: [
-                "Cognitive state inference from multi-modal physiological signals",
-                "Privacy-first, on-device edge inference by design",
-                "System-level IP across sensing, inference, and architecture",
-                "Explainable, bounded inference with audit-ready outputs"
+                "Deep (HRV, CRS, stress detection)",
+                "Morning brief + real-time alerts",
+                "Telegram (WhatsApp planned)",
+                "Any HealthKit / Health Connect watch",
+                "Android + iOS from MVP",
+                "Free / $4.34/mo"
             ]
         },
         {
-            name: "Consumer Wearables",
+            name: "WHOOP Coach",
             highlight: false,
             values: [
-                "Fitness and wellness metrics only",
-                "Cloud-dependent data pipelines",
-                "Commodity hardware + software",
-                "Black-box scores"
+                "Deep (recovery, strain)",
+                "In-app only, no external delivery",
+                "No external channel",
+                "WHOOP band only",
+                "iOS + Android",
+                "$17-30/mo"
             ]
         },
         {
-            name: "Research Prototypes",
+            name: "Nori (YC)",
             highlight: false,
             values: [
-                "Isolated lab-grade models",
-                "Non-scalable experimental setups",
-                "Academic publications, no IP moat",
-                "Not deployment-ready"
+                "Aggregated from multiple sources",
+                "Morning plan only",
+                "No external channel",
+                "Multi-wearable",
+                "iOS only",
+                "TBD"
             ]
         },
         {
-            name: "Enterprise Analytics",
+            name: "Lindy / Manus",
             highlight: false,
             values: [
-                "Post-hoc analytics without physiological grounding",
-                "Centralized cloud processing",
-                "Software-only, easily replicable",
-                "Limited model transparency"
+                "None — zero biological awareness",
+                "Yes, proactive agents",
+                "Multiple channels",
+                "N/A — no wearable integration",
+                "Web only",
+                "$50/mo"
             ]
         }
     ]
@@ -495,11 +503,10 @@ export default function InvestorPage() {
                             </span>
                         </motion.div>
                         <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">
-                            Investment <span className="text-emerald-gradient">Overview</span>
+                            The <span className="text-emerald-gradient">Opportunity</span>
                         </h1>
                         <p className="text-body-lg text-text-secondary font-extralight leading-relaxed mb-8">
-                            Explore our business model, market strategy, and competitive advantages.
-                            OneSync is building the future of cognitive performance intelligence.
+                            Half of Y Combinator&apos;s latest batch is building AI agents. Every one of them is blind to the human body. We&apos;re building the missing layer — and the window is closing fast.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <motion.a
@@ -540,7 +547,7 @@ export default function InvestorPage() {
                             Lean <span className="text-emerald-gradient">Canvas</span>
                         </h2>
                         <p className="text-body-lg text-text-dark-secondary font-light mt-4 max-w-2xl mx-auto">
-                            Our validated approach to solving cognitive performance measurement at scale.
+                            A consumer AI health agent built at extreme capital efficiency — $466 MVP cost, 79% margins at scale.
                         </p>
                     </motion.div>
 
@@ -581,7 +588,7 @@ export default function InvestorPage() {
                             Business Model <span className="text-emerald-gradient">Canvas</span>
                         </h2>
                         <p className="text-body-lg text-text-dark-secondary font-light mt-4 max-w-2xl mx-auto">
-                            How we create, deliver, and capture value in the performance intelligence market.
+                            How we turn wearable data into a compounding moat that no competitor can replicate.
                         </p>
                     </motion.div>
 
@@ -619,10 +626,10 @@ export default function InvestorPage() {
                     <motion.div {...scrollReveal} className="text-center mb-16">
                         <SectionLabel>Market Position</SectionLabel>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
-                            Competitive <span className="text-emerald-gradient">Advantage</span>
+                            The Empty <span className="text-emerald-gradient">Quadrant</span>
                         </h2>
                         <p className="text-body-lg text-text-dark-secondary font-light mt-4 max-w-2xl mx-auto">
-                            How OneSync differentiates from existing solutions in the market.
+                            Every competitor has a piece. Nobody has put it all together. Here&apos;s where we sit.
                         </p>
                     </motion.div>
 
@@ -703,11 +710,10 @@ export default function InvestorPage() {
                 <div className="section-container text-center relative z-10">
                     <motion.div {...scrollReveal}>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light mb-6">
-                            Ready to <span className="text-emerald-gradient">Partner</span>?
+                            Let&apos;s <span className="text-emerald-gradient">Talk</span>
                         </h2>
                         <p className="text-body-lg text-text-dark-secondary font-light mb-10 max-w-xl mx-auto">
-                            Join us in revolutionizing cognitive performance intelligence.
-                            We&apos;re seeking strategic investors and partners.
+                            Pre-seed: $55K-$110K. Total MVP cost: $466. That&apos;s 50-150x more capital-efficient than the average health tech startup. We build fast because we build smart.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
                             <motion.a

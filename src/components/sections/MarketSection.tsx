@@ -9,22 +9,22 @@ import { BackgroundText } from "@/components/ui/BackgroundText";
 
 const marketStats = [
     {
-        value: 550,
-        suffix: "M+",
-        label: "People Want to Measure",
-        highlight: "Cognition-First",
-        description: "Metrics",
+        value: 62,
+        suffix: "%",
+        label: "Of Knowledge Workers Are",
+        highlight: "Burning Out",
+        description: "While Their AI Tools Watch",
         position: "left" as const,
         decimals: 0,
     },
     {
-        value: 1,
-        suffix: "B+",
-        label: "People Want to Measure",
-        highlight: "Physical-First",
-        description: "Metrics",
+        value: 0,
+        suffix: "",
+        label: "AI Agents Today Know",
+        highlight: "Your Biology",
+        description: "That Changes Now",
         position: "right" as const,
-        decimals: 1,
+        decimals: 0,
     },
 ];
 
@@ -43,9 +43,9 @@ export function MarketSection() {
             <div className="section-container relative z-10">
                 {/* Section Header */}
                 <motion.div {...scrollReveal} className="text-center mb-24">
-                    <SectionLabel>Market Opportunity</SectionLabel>
+                    <SectionLabel>The Opportunity</SectionLabel>
                     <h2 className="font-display text-display-lg md:text-display-xl text-text-dark font-extralight">
-                        The Future is <span className="text-emerald-gradient">Cognitive</span>
+                        The Quadrant Nobody <span className="text-emerald-gradient">Occupies</span>
                     </h2>
                 </motion.div>
 
@@ -136,7 +136,7 @@ export function MarketSection() {
                             </defs>
                             <text className="fill-neutral-300" style={{ fontSize: "8.5px", letterSpacing: "3px" }}>
                                 <textPath href="#circlePath" className="font-mono uppercase">
-                                    MARKET · OPPORTUNITY · GLOBAL ·{" "}
+                                    BIOLOGY · AGENCY · PROACTIVE ·{" "}
                                 </textPath>
                             </text>
                         </motion.svg>
@@ -156,7 +156,7 @@ export function MarketSection() {
                         />
                     </div>
                     <p className="text-xl md:text-2xl text-text-dark-muted font-extralight">
-                        Global Market Opportunity
+                        Where Wearables Meet AI Agents
                     </p>
 
                     {/* Decorative bottom accent */}

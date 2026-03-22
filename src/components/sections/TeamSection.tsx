@@ -55,11 +55,11 @@ export function TeamSection() {
                     <SectionLabel>The Team</SectionLabel>
 
                     <h2 className="font-display text-h1 md:text-display text-text-dark font-light mb-4">
-                        Built by <span className="text-emerald-gradient">Founders</span>
+                        The People <span className="text-emerald-gradient">Behind It</span>
                     </h2>
 
                     <p className="text-body-lg text-text-dark-secondary font-light max-w-2xl mx-auto">
-                        Dedicated to revolutionizing mental wellness through technology. Building end-to-end — hardware, sensing, and AI.
+                        We&apos;re engineers, athletes, and builders who believe the next great AI needs to start with the body, not the calendar.
                     </p>
                 </motion.div>
 

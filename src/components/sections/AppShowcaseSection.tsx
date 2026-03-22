@@ -9,9 +9,9 @@ import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, appPerspective, staggerReveal, staggerRevealItem } from "@/lib/motion";
 
 const features = [
-    { text: "Continuous", highlight: "Performance Loop" },
-    { text: "Personal", highlight: "Digital Twin" },
-    { text: "Actionable", highlight: "Guidance" },
+    { text: "Morning", highlight: "Truth Brief" },
+    { text: "Real-Time", highlight: "Interventions" },
+    { text: "Patterns Only", highlight: "Time Reveals" },
 ];
 
 // Set to true when real app screenshots are available
@@ -19,15 +19,15 @@ const HAS_APP_SCREENSHOTS = true;
 
 const appScreens = [
     {
-        name: "Dashboard",
-        description: "Your daily wellness overview",
+        name: "Your Readiness",
+        description: "How sharp you are right now — not yesterday",
         variant: "neural" as const,
         image: "/app/OneSync App Landing Screen 1.png",
         rotation: -15,
     },
     {
-        name: "Analytics",
-        description: "Weekly recovery trends and biometrics",
+        name: "Your Patterns",
+        description: "The things about yourself only weeks of data reveal",
         variant: "analytics" as const,
         image: "/app/OneSync App Landing Screen 2.png",
         rotation: 15,
@@ -56,12 +56,12 @@ export function AppShowcaseSection() {
             <div className="section-wide relative z-10">
                 {/* Section Header */}
                 <motion.div {...scrollReveal} className="text-center mb-16">
-                    <SectionLabel>The Application</SectionLabel>
+                    <SectionLabel>How It Feels</SectionLabel>
                     <h2 className="font-display text-h1 md:text-display text-text-dark font-light mb-4">
-                        Your Mind, <span className="text-emerald-gradient">Visualized</span>
+                        A Guardian, <span className="text-emerald-gradient">Not a Dashboard</span>
                     </h2>
                     <p className="text-body-lg text-text-dark-secondary font-light max-w-2xl mx-auto">
-                        Readiness, recovery, effort, and focus — turned into clear daily actions
+                        You don&apos;t open OneSync. OneSync reaches you — with a morning brief that tells you the truth and stress alerts that arrive before you spiral.
                     </p>
                 </motion.div>
 

@@ -13,14 +13,14 @@ export default function ContactPage() {
                     <div className="inline-flex items-center gap-2 mb-6">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald" />
                         <span className="text-xs font-light text-emerald uppercase tracking-wider">
-                            Get in Touch
+                            Say Hello
                         </span>
                     </div>
                     <h1 className="font-display text-h1 md:text-display-lg text-text-dark font-light mb-4">
-                        Let&apos;s Talk
+                        We&apos;d Love to Hear From You
                     </h1>
                     <p className="text-body-lg text-text-dark-secondary font-light">
-                        Interested in OneSync for your organization? We&apos;d love to hear from you.
+                        Whether you&apos;re an investor, an early adopter, or just curious — drop us a line. We reply to everything.
                     </p>
                 </div>
 

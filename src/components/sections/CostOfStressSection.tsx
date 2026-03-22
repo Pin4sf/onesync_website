@@ -7,21 +7,21 @@ import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
 
 const impacts = [
-    { category: "Mind", items: ["Fragmented Focus", "Memory Degradation", "Decision Fatigue"] },
-    { category: "Body", items: ["Sleep Disruption", "Elevated Heart Rate", "Chronic Inflammation"] },
-    { category: "Life", items: ["Burnout", "Absenteeism", "Productivity Loss"] },
+    { category: "Your Calendar Says", items: ["12 Hours of Deep Work", "On Track for Launch", "Three Calls, No Conflicts"] },
+    { category: "Your Body Says", items: ["Heart Rate Variability Crashed", "Running on 4 Hours of Sleep Debt", "Stress Response Still Firing"] },
+    { category: "What Actually Happens", items: ["You Ship the Wrong Decision", "The Burnout Hits Next Tuesday", "Nobody Saw It Coming — Except Your Watch"] },
 ];
 
 const marqueeItems = [
-    "FRAGMENTED FOCUS",
-    "MEMORY LOSS",
+    "BLIND SCHEDULING",
+    "MISSED RECOVERY",
     "DECISION FATIGUE",
-    "SLEEP DISRUPTION",
+    "SLEEP DEBT",
     "BURNOUT",
-    "CHRONIC STRESS",
-    "ANXIETY",
-    "INFLAMMATION",
-    "EXHAUSTION",
+    "DEPLETED FOCUS",
+    "IGNORED SIGNALS",
+    "OVERCOMMITMENT",
+    "COGNITIVE CRASH",
 ];
 
 // Interactive Marquee Component
@@ -161,14 +161,14 @@ export function CostOfStressSection() {
 
             <div className="section-container relative z-10">
                 <motion.div {...scrollReveal} className="text-center max-w-3xl mx-auto mb-20">
-                    <SectionLabel>Consequences</SectionLabel>
+                    <SectionLabel>The Gap</SectionLabel>
 
                     <h2 className="font-display text-h1 md:text-display text-text-dark font-light mb-6">
-                        The Cost of <span className="text-emerald-gradient">Stress</span>
+                        Two Realities. <span className="text-emerald-gradient">One You.</span>
                     </h2>
 
                     <p className="text-body-lg text-text-dark-secondary font-light">
-                        Chronic stress fundamentally rewires your brain and body.
+                        There&apos;s the version of you on your calendar — and the version your body is actually living. No tool today catches that gap.
                     </p>
                 </motion.div>
 
@@ -232,9 +232,8 @@ export function CostOfStressSection() {
                     className="mt-24 text-center"
                 >
                     <p className="text-2xl md:text-3xl font-extralight text-text-dark-secondary max-w-2xl mx-auto leading-relaxed">
-                        The cumulative effect leads to{" "}
-                        <span className="text-text-dark font-light">irreversible damage</span>—
-                        unless you act now.
+                        Your calendar is a performance.{" "}
+                        <span className="text-text-dark font-light">Your body is the truth.</span>
                     </p>
                 </motion.div>
             </div>

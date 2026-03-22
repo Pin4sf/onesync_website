@@ -7,20 +7,20 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ProductPlaceholder } from "@/components/placeholders";
 import { BackgroundText } from "@/components/ui/BackgroundText";
 import { scrollReveal } from "@/lib/motion";
-import { Activity, Battery, Droplets } from "lucide-react";
+import { Brain, MessageSquare, Smartphone } from "lucide-react";
 
 const features = [
     {
-        title: "24/7 Sensing",
-        Icon: Activity,
+        title: "Your Readiness Score",
+        Icon: Brain,
     },
     {
-        title: "7-Day Battery",
-        Icon: Battery,
+        title: "Delivered to Telegram",
+        Icon: MessageSquare,
     },
     {
-        title: "Waterproof",
-        Icon: Droplets,
+        title: "Works With Your Watch",
+        Icon: Smartphone,
     },
 ];
 
@@ -49,23 +49,23 @@ export function ProductSection() {
             className="py-section-lg relative overflow-hidden bg-light-bg"
         >
             {/* Background typography */}
-            <BackgroundText text="ONEBAND" position="center" direction="left" speed={0.4} />
+            <BackgroundText text="AGENT" position="center" direction="left" speed={0.4} />
 
             <div className="section-wide relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                     {/* Text Content */}
                     <motion.div {...scrollReveal} className="order-2 lg:order-1">
-                        <SectionLabel>The Device</SectionLabel>
+                        <SectionLabel>Meet Your Agent</SectionLabel>
 
                         <h2 className="font-display text-h1 md:text-display text-text-dark font-light mb-6">
-                            Designed to{" "}
-                            <span className="text-emerald-gradient">disappear</span>
+                            It reads your{" "}
+                            <span className="text-emerald-gradient">watch</span>
                             <br />
-                            until you need it
+                            and tells you the truth
                         </h2>
 
                         <p className="text-body-lg text-text-dark-secondary font-light mb-10 max-w-lg">
-                            Premium materials meet advanced neural sensing. Feels like nothing, knows everything.
+                            Every morning, OneSync tells you how sharp you actually are — not how you feel, but what your biology says. A score, an insight, and a plan — delivered to Telegram before your first coffee.
                         </p>
 
                         {/* Feature List */}
@@ -116,7 +116,7 @@ export function ProductSection() {
                                 ) : HAS_PRODUCT_IMAGE ? (
                                     <Image
                                         src="/product/oneband-render.jpeg"
-                                        alt="OneBand - The wearable designed to disappear"
+                                        alt="OneSync - The AI agent that reads your body"
                                         width={800}
                                         height={800}
                                         className="w-full h-auto"
