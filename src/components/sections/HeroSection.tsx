@@ -67,7 +67,7 @@ export function HeroSection() {
                     ) : HAS_PRODUCT_IMAGE ? (
                         <Image
                             src="/product/oneband-hero.png"
-                            alt="OneBand"
+                            alt="OneSync"
                             fill
                             className="object-cover object-center lg:object-[center_35%] xl:object-[center_35%]"
                             priority
@@ -92,7 +92,7 @@ export function HeroSection() {
                         className="font-display text-7xl md:text-8xl lg:text-[10rem] font-light tracking-tight mb-6"
                     >
                         <span className="text-text-primary">ONE</span>
-                        <span className="text-text-primary">BAND</span>
+                        <span className="text-text-primary">SYNC</span>
                     </motion.h1>
 
                     {/* Tagline - lighter opacity */}
@@ -100,7 +100,7 @@ export function HeroSection() {
                         {...heroAnimations.tagline}
                         className="text-xl md:text-2xl lg:text-3xl text-text-muted/70 font-extralight tracking-wide"
                     >
-                        Beyond Vital Signs. Into the Mind
+                        Your Body Talks. We Finally Listen.
                     </motion.p>
                 </motion.div>
 

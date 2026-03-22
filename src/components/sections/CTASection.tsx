@@ -33,17 +33,17 @@ export function CTASection() {
                     >
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald" />
                         <span className="text-xs font-light text-emerald uppercase tracking-wider">
-                            Now Seeking Partners
+                            Building in Public
                         </span>
                     </motion.div>
 
                     <h2 className="font-display text-h1 md:text-display-lg text-text-dark font-light mb-6">
-                        Be Part of the{" "}
-                        <span className="text-emerald-gradient">Future</span>
+                        Every Agent Will Need{" "}
+                        <span className="text-emerald-gradient">a Body</span>
                     </h2>
 
                     <p className="text-body-lg text-text-dark-secondary font-light mb-12 max-w-xl mx-auto">
-                        We&apos;re looking for investors, partners, and early adopters.
+                        We&apos;re looking for investors who see it, early adopters who feel it, and partners who want to build the future of personal AI — starting from the inside out.
                     </p>
 
                     {/* CTA Buttons - cleaner */}
@@ -99,9 +99,9 @@ export function CTASection() {
                         viewport={{ once: true }}
                         className="mt-20"
                     >
-                        <p className="text-xs text-text-dark-muted font-light mb-6">Backed by Science. Built for the Future.</p>
+                        <p className="text-xs text-text-dark-muted font-light mb-6">Powered by Claude &middot; Grounded in Science &middot; Private by Default</p>
                         <div className="flex flex-wrap items-center justify-center gap-8">
-                            {["HIPAA Pathway", "FDA Pathway", "SOC 2 Planned"].map((badge) => (
+                            {["Any Smartwatch", "Android + iOS", "Free to Start"].map((badge) => (
                                 <span
                                     key={badge}
                                     className="text-xs text-text-dark-muted font-light"

@@ -13,7 +13,7 @@ const navItems = [
     { name: "Product", href: "/product" },
     { name: "Technology", href: "/technology" },
     { name: "Team", href: "/team" },
-    { name: "Demo", href: "/demo" },
+    { name: "Investors", href: "/investor" },
 ];
 
 export function Header() {

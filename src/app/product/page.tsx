@@ -13,86 +13,86 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 const features = [
     {
-        icon: Activity,
-        title: "24/7 Passive Sensing",
-        description: "Continuous monitoring without any user intervention. The band works silently in the background.",
-    },
-    {
-        icon: Battery,
-        title: "7+ Day Battery Life",
-        description: "Advanced power management means you charge less and track more.",
-    },
-    {
-        icon: Droplets,
-        title: "5 ATM Water Resistant",
-        description: "Swim, shower, or sweat without worry. Rated for 50 meters.",
-    },
-    {
         icon: Brain,
-        title: "Cognitive Load Detection",
-        description: "Proprietary algorithms detect mental fatigue before you feel it.",
+        title: "A Score That Means Something",
+        description: "Your Cognitive Readiness Score tells you how sharp you actually are — computed from sleep quality, heart rate variability, your circadian rhythm, and activity. Updated every 15 minutes.",
+    },
+    {
+        icon: Activity,
+        title: "Your Watch, Our Intelligence",
+        description: "Already wear an Apple Watch or Android smartwatch? That's all you need. OneSync reads the data your watch collects and makes it actually useful.",
     },
     {
         icon: Heart,
-        title: "Advanced HRV Analysis",
-        description: "Advanced heart rate variability tracking for deep insights.",
+        title: "Interventions, Not Notifications",
+        description: "When your stress response fires, OneSync doesn't wait for you to open an app. It reaches you on Telegram with a personalized intervention — before the anxiety registers.",
+    },
+    {
+        icon: Zap,
+        title: "Your Morning Truth Brief",
+        description: "Every morning: how your body prepared for today, what your readiness score means, and one actionable insight. On Telegram, before your first meeting.",
     },
     {
         icon: Shield,
-        title: "Privacy by Design",
-        description: "All sensitive processing happens on-device. Your data stays yours.",
+        title: "Your Data Stays Yours",
+        description: "Health data is the most intimate data you have. It's encrypted on your phone, locked behind row-level security in the cloud, and never logged anywhere.",
+    },
+    {
+        icon: Smartphone,
+        title: "It Gets Smarter Over Time",
+        description: "By week two, it knows your baselines. By month one, it catches your stress triggers. By month three, it predicts tomorrow based on today.",
     },
 ];
 
 const bentoSpecs = [
     {
-        title: "Week-Long Battery",
-        description: "Go days between charges with intelligent power management",
-        icon: Battery,
+        title: "Your Readiness Score",
+        description: "A single number (0-100) that tells you how cognitively sharp you are right now. Computed on your phone, works offline, updates every 15 minutes.",
+        icon: Brain,
         size: "large",
-        highlight: "7+ Days",
+        highlight: "The Core",
     },
     {
-        title: "Featherlight Design",
-        description: "So light you'll forget you're wearing it",
+        title: "Smart Cost Control",
+        description: "Most checks don't need AI at all — saving you money at scale",
         icon: Zap,
         size: "small",
-        highlight: "Ultra-Light",
+        highlight: "Efficient",
     },
     {
-        title: "Swim-Ready",
-        description: "Waterproof design for any activity",
-        icon: Droplets,
-        size: "small",
-        highlight: "Waterproof",
-    },
-    {
-        title: "Advanced Sensors",
-        description: "Advanced biosensors for heart rate, temperature, and more",
-        icon: Activity,
-        size: "medium",
-        highlight: "Pro Sensors",
-    },
-    {
-        title: "Smart Processing",
-        description: "On-device AI that learns and adapts to you",
-        icon: Brain,
-        size: "medium",
-        highlight: "Edge AI",
-    },
-    {
-        title: "Seamless Sync",
-        description: "Instant connection to your devices",
+        title: "Both Platforms",
+        description: "iPhone and Android from day one",
         icon: Smartphone,
         size: "small",
-        highlight: "Bluetooth",
+        highlight: "Cross-Platform",
     },
     {
-        title: "Skin-Safe Materials",
-        description: "Hypoallergenic silicone for all-day comfort",
+        title: "Powered by Claude",
+        description: "Personalized, empathetic messaging from Anthropic's AI — not generic push notifications",
+        icon: Activity,
+        size: "medium",
+        highlight: "Truly Personal",
+    },
+    {
+        title: "Meets You on Telegram",
+        description: "Alerts arrive where you already are. Not buried in another app you'll forget to open.",
+        icon: ArrowRight,
+        size: "medium",
+        highlight: "Proactive",
+    },
+    {
+        title: "Encrypted End-to-End",
+        description: "Military-grade encryption for the most intimate data you have",
         icon: Shield,
         size: "small",
-        highlight: "Comfort Fit",
+        highlight: "Private",
+    },
+    {
+        title: "Learns Over Months",
+        description: "The longer you use it, the better it knows you. That's the moat.",
+        icon: Heart,
+        size: "small",
+        highlight: "Compounding",
     },
 ];
 
@@ -122,12 +122,12 @@ export default function ProductPage() {
                     <div className="flex items-center justify-center min-h-[70vh]">
                         <motion.div {...fadeInUp} className="text-center max-w-3xl">
                             <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">
-                                <span className="text-emerald-gradient">ONEBAND</span>
+                                <span className="text-emerald-gradient">ONESYNC</span>
                             </h1>
                             <p className="text-body-lg text-text-secondary font-extralight mb-8 leading-relaxed mx-auto">
-                                A wearable that learns your physiology, movement, and cognitive patterns —
-                                then turns it into a continuous performance loop for readiness, recovery,
-                                effort, and focus. Your personal performance model, always with you.
+                                Imagine waking up and getting a message that says: &ldquo;Your body recovered well.
+                                Your sharpest window is 9-12am. That investor email you&apos;ve been drafting? Now is the time.&rdquo;
+                                That&apos;s OneSync.
                             </p>
                             <div className="flex flex-wrap gap-4 justify-center">
                                 <motion.a
@@ -136,7 +136,7 @@ export default function ProductPage() {
                                     whileTap={{ scale: 0.98 }}
                                     className="group inline-flex items-center gap-3 px-8 py-4 bg-emerald text-white font-light rounded-full hover:bg-emerald-light transition-colors"
                                 >
-                                    Request Demo
+                                    Get Early Access
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </motion.a>
                                 <motion.a
@@ -160,9 +160,9 @@ export default function ProductPage() {
 
                 <div className="section-container relative z-10">
                     <motion.div {...scrollReveal} className="text-center mb-20">
-                        <SectionLabel>Features</SectionLabel>
+                        <SectionLabel>What It Does</SectionLabel>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
-                            Built for the <span className="text-emerald-gradient">Future</span>
+                            Not Another <span className="text-emerald-gradient">Health App</span>
                         </h2>
                     </motion.div>
 
@@ -205,9 +205,9 @@ export default function ProductPage() {
 
                 <div className="section-container relative z-10">
                     <motion.div {...scrollReveal} className="text-center mb-16">
-                        <SectionLabel>Specifications</SectionLabel>
+                        <SectionLabel>Under the Hood</SectionLabel>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
-                            Built to <span className="text-emerald-gradient">Perform</span>
+                            Designed to <span className="text-emerald-gradient">Compound</span>
                         </h2>
                     </motion.div>
 
@@ -283,19 +283,18 @@ export default function ProductPage() {
                 <div className="section-container relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div {...scrollReveal}>
-                            <SectionLabel>Companion App</SectionLabel>
+                            <SectionLabel>The Roadmap</SectionLabel>
                             <h2 className="font-display text-display md:text-display-lg text-text-dark font-light mb-6">
-                                Seamlessly <span className="text-emerald-gradient">Connected</span>
+                                Where This <span className="text-emerald-gradient">Goes</span>
                             </h2>
                             <p className="text-body-lg text-text-dark-secondary font-light mb-10 leading-relaxed">
-                                The OneSync mobile app provides a beautiful, intuitive interface
-                                to your cognitive and physical wellness data.
+                                Today, OneSync knows your body. Tomorrow, it knows your calendar, your email, your Slack. Eventually, it becomes the operating system for your entire life — starting from the only signal that can&apos;t be faked.
                             </p>
                             <div className="space-y-6">
                                 {[
-                                    { icon: Smartphone, text: "Available on iOS and Android" },
-                                    { icon: Zap, text: "Real-time sync with OneBand" },
-                                    { icon: Shield, text: "End-to-end encrypted" },
+                                    { icon: Smartphone, text: "Now: Your body — readiness, stress, recovery" },
+                                    { icon: Zap, text: "Next: Your world — calendar, email, tasks" },
+                                    { icon: Shield, text: "Then: Your OS — an agent that handles anything" },
                                 ].map((item) => (
                                     <div key={item.text} className="flex items-center gap-4 group">
                                         <div className="w-8 h-8 rounded-full bg-emerald/10 flex items-center justify-center group-hover:bg-emerald/20 transition-colors">
@@ -326,11 +325,10 @@ export default function ProductPage() {
                 <div className="section-container text-center relative z-10">
                     <motion.div {...scrollReveal}>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light mb-6">
-                            Ready for the <span className="text-emerald-gradient">Future</span>?
+                            Your Body Already <span className="text-emerald-gradient">Knows</span>
                         </h2>
                         <p className="text-body-lg text-text-dark-secondary font-light mb-10 max-w-xl mx-auto">
-                            Join our early access program and be among the first to
-                            experience cognitive wellness tracking.
+                            Join the early access and be among the first people whose AI agent actually understands them.
                         </p>
                         <motion.a
                             href="mailto:01nesync@gmail.com"

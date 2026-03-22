@@ -9,9 +9,9 @@ import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { TextReveal } from "@/components/ui/TextReveal";
 
 const values = [
-    "Minimal by design",
-    "Scientifically grounded",
-    "Private by default",
+    "Works with any smartwatch",
+    "Comes to you, not the other way",
+    "Your data never leaves your control",
 ];
 
 export function VisionSection() {
@@ -35,7 +35,7 @@ export function VisionSection() {
             <DotGrid opacity={10} gap={28} />
 
             {/* Background typography */}
-            <BackgroundText text="CLARITY" position="center" direction="right" speed={0.5} />
+            <BackgroundText text="BODY FIRST" position="center" direction="right" speed={0.5} />
 
             <div className="section-container relative z-10">
                 <motion.div
@@ -57,14 +57,19 @@ export function VisionSection() {
 
                         <blockquote className="relative z-10">
                             <p className="font-display text-3xl md:text-4xl lg:text-5xl font-extralight text-text-dark-secondary leading-tight">
-                                Make Calm{" "}
+                                Body{" "}
                                 <strong className="text-emerald font-light">
-                                    Measurable
+                                    First
                                 </strong>
                                 <br />
-                                <span className="text-text-dark-muted">Make Clarity </span>
+                                <span className="text-text-dark-muted">Context </span>
                                 <strong className="text-emerald font-light">
-                                    Trainable
+                                    Next
+                                </strong>
+                                <br />
+                                <span className="text-text-dark-muted">Then </span>
+                                <strong className="text-emerald font-light">
+                                    Everything Else
                                 </strong>
                             </p>
                         </blockquote>
@@ -82,7 +87,7 @@ export function VisionSection() {
                     {/* Vision statement with scroll-reveal text */}
                     <div className="mt-12 mb-8">
                         <TextReveal
-                            text="We believe the next frontier of health isn't just physical — it's cognitive. OneSync exists to make the invisible visible."
+                            text="We built an entire industry around collecting the most intimate data in existence — signals from inside your own body — and left people completely alone with it. OneSync is the agent that finally does something about it."
                             className="font-display text-2xl md:text-3xl font-extralight text-text-dark-secondary leading-relaxed justify-center"
                             as="p"
                         />

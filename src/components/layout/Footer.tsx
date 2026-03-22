@@ -9,11 +9,12 @@ const navLinks = [
     { name: "Product", href: "/product" },
     { name: "Technology", href: "/technology" },
     { name: "Team", href: "/team" },
+    { name: "Investors", href: "/investor" },
 ];
 
 const productInfo = {
-    title: "ONEBAND powers",
-    subtitle: "cognitive wellness",
+    title: "ONESYNC reads your body",
+    subtitle: "and acts before you crash",
     cta: { name: "Learn more", href: "/product" },
 };
 

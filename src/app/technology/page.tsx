@@ -11,64 +11,64 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 const techStack = [
     {
-        category: "Edge Computing",
+        category: "The Brain on Your Phone",
         icon: Cpu,
         items: [
             {
-                name: "On-Device ML",
-                description: "TinyML models optimized for low-power ARM processors, enabling real-time feature extraction.",
+                name: "Your Readiness Engine",
+                description: "A score that tells you how sharp you are — computed entirely on your phone from sleep, heart rate variability, circadian rhythm, and movement. No internet needed. No data leaves your device.",
                 icon: Layers,
             },
             {
-                name: "Signal Processing",
-                description: "Kalman filtering and adaptive algorithms for motion artifact rejection.",
+                name: "Speaks to Every Watch",
+                description: "Native Swift and Kotlin modules that talk directly to Apple HealthKit and Android Health Connect. Your watch already collects the data — we just make it useful.",
                 icon: Activity,
             },
             {
-                name: "Feature Extraction",
-                description: "HRV computation, sleep classification, and activity recognition all happen locally.",
+                name: "The Smart Skip",
+                description: "Most of the time, your body is fine and the AI doesn't need to run. A simple rules engine catches 60-80% of checks — meaning zero AI cost for the majority of your day.",
                 icon: FileJson,
             },
         ],
     },
     {
-        category: "Connectivity",
+        category: "The Agent That Speaks",
         icon: Wifi,
         items: [
             {
-                name: "BLE 5.0",
-                description: "Low-energy Bluetooth for efficient, secure communication with mobile devices.",
-                icon: Wifi,
-            },
-            {
-                name: "Selective Sync",
-                description: "Only consented feature-level data is transmitted, never raw biosignals.",
+                name: "Powered by Claude",
+                description: "When the agent does speak, it uses Anthropic's Claude — the same AI that powers tools engineers love. Personalized, empathetic, and never generic.",
                 icon: Server,
             },
             {
-                name: "Offline First",
-                description: "Full functionality without connectivity. Data syncs when available.",
+                name: "13 Systems in One",
+                description: "We didn't invent from scratch. We studied the best — from enterprise agent platforms to open-source frameworks — and distilled the best patterns into a single architecture.",
+                icon: Code,
+            },
+            {
+                name: "Serverless Backbone",
+                description: "The backend runs on Supabase Edge Functions — serverless, scalable, and cost-effective. Checks run every 15 minutes, quietly, in the background.",
                 icon: Shield,
             },
         ],
     },
     {
-        category: "Security",
+        category: "Privacy as a Feature",
         icon: Shield,
         items: [
             {
-                name: "End-to-End Encryption",
-                description: "AES-256 encryption from device to cloud. Keys never leave your control.",
+                name: "Military-Grade Encryption",
+                description: "Your health data is encrypted on your phone with AES-256 — the same standard used by governments. Not even we can read it.",
                 icon: Lock,
             },
             {
-                name: "Secure Enclave",
-                description: "Sensitive computations isolated in hardware-protected memory regions.",
+                name: "You Only See Yours",
+                description: "Every database query is locked to your account. Row-level security means even if someone broke into the server, they couldn't see your data.",
                 icon: Shield,
             },
             {
-                name: "Audit Logging",
-                description: "Immutable logs of all data access for compliance and transparency.",
+                name: "We Don't Log Your Health",
+                description: "We never log your actual heart rate, sleep hours, or stress levels. Period. We track what the agent did, not what your body said.",
                 icon: FileJson,
             },
         ],
@@ -76,12 +76,12 @@ const techStack = [
 ];
 
 const specifications = [
-    { label: "Processor", value: "High-Performance ARM Core", description: "Optimized for on-device AI", icon: Cpu },
-    { label: "Memory", value: "Ample Storage", description: "Weeks of data on-device", icon: Server },
-    { label: "Sensors", value: "Advanced Sensor Array", description: "Heart, motion, temperature & more", icon: Activity },
-    { label: "Battery Life", value: "Week-Long Power", description: "Go days between charges", icon: Zap },
-    { label: "Water Resistance", value: "Fully Waterproof", description: "Swim, shower, sweat", icon: Shield },
-    { label: "Connectivity", value: "Instant Sync", description: "Latest Bluetooth technology", icon: Wifi },
+    { label: "Mobile App", value: "React Native + Expo", description: "One codebase, both platforms", icon: Cpu },
+    { label: "Design System", value: "NativeWind + Tailwind", description: "Beautiful, consistent UI", icon: Zap },
+    { label: "Health Data", value: "Encrypted SQLite", description: "AES-256 on your phone", icon: Shield },
+    { label: "Cloud", value: "Supabase", description: "Postgres + Edge Functions + Auth", icon: Server },
+    { label: "Intelligence", value: "Claude by Anthropic", description: "Empathetic, personalized AI", icon: Activity },
+    { label: "Delivery", value: "Telegram Bot", description: "Messages that reach you first", icon: Wifi },
 ];
 
 export default function TechnologyPage() {
@@ -107,11 +107,10 @@ export default function TechnologyPage() {
                     <Breadcrumbs variant="dark" segments={[{ label: "Home", href: "/" }, { label: "Technology" }]} />
                     <motion.div {...scrollReveal}>
                         <h1 className="font-display text-display-lg md:text-display-xl text-text-primary font-light mb-6 tracking-tight">
-                            Core <span className="text-emerald-gradient">Technology</span>
+                            How We <span className="text-emerald-gradient">Built It</span>
                         </h1>
                         <p className="text-body-lg md:text-xl text-text-secondary font-extralight max-w-2xl leading-relaxed">
-                            A deep dive into the engineering choices that make OneSync possible.
-                            Built for reliability, privacy, and transparency.
+                            We studied 13 production agent systems — from enterprise platforms to open-source frameworks — and took the best ideas from each. Then we built something that works offline, respects your privacy, and costs almost nothing to run.
                         </p>
                     </motion.div>
                 </div>
@@ -188,9 +187,9 @@ export default function TechnologyPage() {
 
                 <div className="section-container relative z-10">
                     <motion.div {...scrollReveal} className="text-center mb-16">
-                        <SectionLabel>Specifications</SectionLabel>
+                        <SectionLabel>The Stack</SectionLabel>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
-                            Built to <span className="text-emerald-gradient">Perform</span>
+                            What Powers <span className="text-emerald-gradient">OneSync</span>
                         </h2>
                     </motion.div>
 
@@ -239,9 +238,9 @@ export default function TechnologyPage() {
             <section className="py-section-lg relative overflow-hidden bg-light-bg">
                 <div className="section-container relative z-10">
                     <motion.div {...scrollReveal} className="text-center mb-20">
-                        <SectionLabel>Philosophy</SectionLabel>
+                        <SectionLabel>Design Decisions</SectionLabel>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light">
-                            Why We <span className="text-emerald-gradient">Build This Way</span>
+                            Why These <span className="text-emerald-gradient">Choices</span>
                         </h2>
                     </motion.div>
 
@@ -257,15 +256,11 @@ export default function TechnologyPage() {
                                     <Zap className="w-5 h-5 text-emerald" />
                                 </div>
                                 <h3 className="text-xl font-light text-text-dark">
-                                    Why Edge-First?
+                                    Why compute on your phone?
                                 </h3>
                             </div>
                             <p className="text-text-dark-secondary font-light leading-relaxed">
-                                Moving computation to the edge isn't just about privacy — it's
-                                about creating a more reliable, responsive system. When your
-                                insights don't depend on connectivity, they're always available
-                                when you need them. This architecture also enables features that
-                                would be impractical with cloud-only processing.
+                                Because your readiness score should work without WiFi, respond instantly, and never send raw health data anywhere. The science behind it is grounded in SAFTE-FAST — the same model the US Army uses for fatigue risk management. We adapted it for everyday life.
                             </p>
                         </motion.div>
 
@@ -281,15 +276,11 @@ export default function TechnologyPage() {
                                     <Code className="w-5 h-5 text-emerald" />
                                 </div>
                                 <h3 className="text-xl font-light text-text-dark">
-                                    Designed for Extensibility
+                                    Why Telegram, not an app?
                                 </h3>
                             </div>
                             <p className="text-text-dark-secondary font-light leading-relaxed">
-                                The OneSync architecture is built to evolve. New sensor
-                                modalities, updated ML models, and enhanced features can be
-                                deployed via secure OTA updates. The system is designed to grow
-                                with advances in wearable computing while maintaining backward
-                                compatibility and data integrity.
+                                Because 88% of health app users stop opening the app within 30 days. Dashboards are beautiful and completely useless if nobody looks at them. A Telegram message that arrives at 7am is fundamentally different from a score waiting in an app. The delivery IS the product.
                             </p>
                         </motion.div>
                     </div>
@@ -303,10 +294,10 @@ export default function TechnologyPage() {
                 <div className="section-container text-center relative z-10">
                     <motion.div {...scrollReveal}>
                         <h2 className="font-display text-display md:text-display-lg text-text-dark font-light mb-6">
-                            See It In <span className="text-emerald-gradient">Action</span>
+                            See What It <span className="text-emerald-gradient">Does</span>
                         </h2>
                         <p className="text-body-lg text-text-dark-secondary font-light mb-10 max-w-xl mx-auto">
-                            Explore the product that brings this technology to life.
+                            The technology is interesting. What it enables is extraordinary.
                         </p>
                         <motion.a
                             href="/product"

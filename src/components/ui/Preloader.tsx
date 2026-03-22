@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const words = ["Wellness", "Balance", "Harmony", "Focus", "OneSync"];
+const words = ["Your Body", "Your Patterns", "Your Edge", "Your Agent", "OneSync"];
 
 const easeOutExpo = [0.16, 1, 0.3, 1] as const;
 const easeOutQuart = [0.76, 0, 0.24, 1] as const;
@@ -124,7 +124,7 @@ export function Preloader() {
                 transition={{ duration: 0.8, delay: 2.2 }}
                 className="mt-8 text-xs font-light text-text-muted tracking-[0.3em] uppercase"
             >
-                Beyond Vital Signs
+                Body First. Then Everything.
             </motion.p>
 
             {/* Progress bar */}
