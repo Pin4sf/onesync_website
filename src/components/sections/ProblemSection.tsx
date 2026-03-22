@@ -52,7 +52,7 @@ export function ProblemSection() {
                     </h2>
 
                     <p className="text-body-lg text-text-dark-secondary font-light max-w-2xl mb-16 md:mb-24">
-                        Your AI agent will schedule your hardest meeting when your nervous system is depleted. It will push you through a 14-hour day when your biology is screaming for recovery. It optimizes what you do — without understanding who you are.
+                        You push through the 14-hour day because you &ldquo;feel fine.&rdquo; You make the big decision at 11pm because the deadline won&apos;t wait. You say yes to everything because stopping feels like falling behind. Meanwhile, your body has been screaming for recovery — and nothing in your life is listening.
                     </p>
                 </motion.div>
 

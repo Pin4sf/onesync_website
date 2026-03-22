@@ -7,21 +7,21 @@ import { DotGrid } from "@/components/backgrounds/DotGrid";
 import { scrollReveal, staggerReveal, staggerRevealItem } from "@/lib/motion";
 
 const impacts = [
-    { category: "Your Calendar Says", items: ["12 Hours of Deep Work", "On Track for Launch", "Three Calls, No Conflicts"] },
-    { category: "Your Body Says", items: ["Heart Rate Variability Crashed", "Running on 4 Hours of Sleep Debt", "Stress Response Still Firing"] },
-    { category: "What Actually Happens", items: ["You Ship the Wrong Decision", "The Burnout Hits Next Tuesday", "Nobody Saw It Coming — Except Your Watch"] },
+    { category: "What You Tell Yourself", items: ["I'm Fine, Just Tired", "I Can Push Through One More Week", "I'll Rest After This Deadline"] },
+    { category: "What Your Body Says", items: ["Heart Rate Variability Crashed", "Running on 4 Hours of Sleep Debt", "Stress Response Still Firing"] },
+    { category: "What Actually Happens", items: ["You Snap at Someone You Love", "The Decision You Made at 11pm Costs You", "The Crash Comes — and Nobody Saw It Coming"] },
 ];
 
 const marqueeItems = [
-    "BLIND SCHEDULING",
+    "SILENT BURNOUT",
     "MISSED RECOVERY",
     "DECISION FATIGUE",
     "SLEEP DEBT",
-    "BURNOUT",
+    "SNAPPING AT LOVED ONES",
     "DEPLETED FOCUS",
     "IGNORED SIGNALS",
-    "OVERCOMMITMENT",
-    "COGNITIVE CRASH",
+    "PUSHING THROUGH",
+    "THE CRASH",
 ];
 
 // Interactive Marquee Component
@@ -168,7 +168,7 @@ export function CostOfStressSection() {
                     </h2>
 
                     <p className="text-body-lg text-text-dark-secondary font-light">
-                        There&apos;s the version of you on your calendar — and the version your body is actually living. No tool today catches that gap.
+                        There&apos;s the version of you that says &ldquo;I&apos;m fine&rdquo; — and the version your nervous system is actually living. No tool today catches that gap.
                     </p>
                 </motion.div>
 
@@ -232,8 +232,8 @@ export function CostOfStressSection() {
                     className="mt-24 text-center"
                 >
                     <p className="text-2xl md:text-3xl font-extralight text-text-dark-secondary max-w-2xl mx-auto leading-relaxed">
-                        Your calendar is a performance.{" "}
-                        <span className="text-text-dark font-light">Your body is the truth.</span>
+                        You tell yourself you&apos;re fine.{" "}
+                        <span className="text-text-dark font-light">Your body always tells the truth.</span>
                     </p>
                 </motion.div>
             </div>
